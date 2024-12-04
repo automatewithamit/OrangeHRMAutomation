@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6484e5f-fee6-4422-bde9-591361debe2f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/Features/Recruitment.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b6484e5f-fee6-4422-bde9-591361debe2f" name="Changes" comment="Added test scenarios for recruitment module" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,6 +45,15 @@
       <option name="presentableId" value="Default" />
       <updated>1733164302632</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added test scenarios for recruitment module">
+      <option name="closed" value="true" />
+      <created>1733351043220</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1733351043220</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -62,6 +68,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="Added test scenarios for recruitment module" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added test scenarios for recruitment module" />
   </component>
 </project>

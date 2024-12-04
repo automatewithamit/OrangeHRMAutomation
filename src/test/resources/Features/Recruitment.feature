@@ -83,4 +83,4 @@ Feature: OrangeHRM Automation for Candidates and Vacancies
       | Name        | Email              | Job Title         |
       | John Doe    | john.doe@example.com | Software Engineer |
     And I add the same candidate again
-    Then I should see an error message "Candidate already exists"
+    Then I should see an error message "Candidate already exists".
