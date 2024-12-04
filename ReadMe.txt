@@ -1,7 +1,7 @@
 Team Name : Explorers
 Team Members are :
 
-1
+1. Oleksandr Kravets
 2
 3
 4
