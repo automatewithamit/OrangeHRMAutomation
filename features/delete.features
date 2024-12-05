@@ -1,0 +1,10 @@
+Feature: Delete a user in User Management
+
+  Scenario: Verify the system allows deleting a user
+    Given I am logged in as an admin
+    When I navigate to the "User Management" module
+    And I select a user from the "Users" list
+    And I click the "Delete" button
+    And I confirm the deletion
+    Then the selected user should be deleted
+    And the "Users" list should be updated to reflect the changes

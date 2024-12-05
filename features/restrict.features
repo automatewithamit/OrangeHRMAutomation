@@ -1,0 +1,9 @@
+Feature: Restrict editing multiple users in User Management
+
+  Scenario: Verify the system prevents editing multiple users at once
+    Given I am logged in as an admin
+    When I navigate to the "User Management" module
+    And I select multiple users from the "Users" list
+    And I click the "Edit" button
+    Then the system should prevent editing multiple users at once
+    And an error message or warning should be displayed indicating that only one user can be edited at a time

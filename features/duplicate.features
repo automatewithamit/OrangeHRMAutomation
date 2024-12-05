@@ -1,0 +1,10 @@
+Feature: Prevent duplicate usernames in User Management
+
+  Scenario: Verify the system prevents adding a user with an existing username
+    Given I am logged in as an admin
+    When I navigate to the "User Management" module
+    And I click the "Add User" button
+    And I fill in all required fields with an existing username
+    And I click "Save"
+    Then an error message "Username already exists" should be displayed
+    And the user should not be added to the system

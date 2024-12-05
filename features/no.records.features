@@ -1,0 +1,7 @@
+Feature: Search functionality in User Management
+
+  Scenario: Verify the system displays "No Records Found" when no users match the search criteria
+    Given I am logged in as an admin
+    When I navigate to the "User Management" module
+    And I enter search criteria that do not match any records
+    Then the system should display the message "No Records Found"

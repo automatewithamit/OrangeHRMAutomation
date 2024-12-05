@@ -1,0 +1,7 @@
+Feature: Search functionality in User Management
+
+  Scenario: Verify the system updates the "Users" list based on valid search criteria
+    Given I am logged in as an admin
+    When I navigate to the "User Management" module
+    And I enter valid search criteria in the search bar
+    Then the "Users" list should update to display users matching the search criteria

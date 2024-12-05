@@ -1,0 +1,11 @@
+Feature: Edit user role and status in User Management
+
+  Scenario: Verify the system allows updating a user's role and status
+    Given I am logged in as an admin
+    When I navigate to the "User Management" module
+    And I select a user from the "Users" list
+    And I click the "Edit" button
+    And I update the user's role and status with new values
+    And I click the "Save" button
+    Then the updated role and status should be saved successfully
+    And the changes should be reflected in the "Users" list

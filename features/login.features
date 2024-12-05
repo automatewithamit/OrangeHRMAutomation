@@ -1,0 +1,10 @@
+Feature: Admin User Management
+
+  Scenario: Add a new user as an admin
+    Given I am logged in as an admin
+    When I navigate to the "User Management" module
+    And I click the "Add User" button
+    And I fill in all required fields with valid data
+    And I click "Save"
+    Then the new user should be successfully added
+    And a confirmation message should be displayed

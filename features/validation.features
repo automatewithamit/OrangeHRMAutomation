@@ -1,0 +1,9 @@
+Feature: Validation of required fields in User Management
+
+  Scenario: Verify validation of required fields when adding a user
+    Given I am logged in as an admin
+    When I navigate to the "User Management" module
+    And I click the "Add User" button
+    And I leave all required fields empty
+    And I click "Save"
+    Then error messages should be displayed indicating the missing fields
