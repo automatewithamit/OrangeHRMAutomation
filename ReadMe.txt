@@ -1,11 +1,12 @@
 Team Name : Explorers
 Team Members are :
 
-1. Oleksandr Kravets
-2. Nikorey Benyard
-3. Sheila Novales
-4. Jamie Oliver
+1: Klaudio
+2: Klevisa
+3: Jamie
+4
 5
 6
 7
 8
+9 Amit
