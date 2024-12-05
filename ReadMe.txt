@@ -3,7 +3,7 @@ Team Members are :
 
 1: Klaudio
 2: Klevisa
-3
+3: Jamie
 4
 5
 6
