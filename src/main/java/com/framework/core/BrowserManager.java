@@ -1,12 +1,13 @@
 /**
  *
  */
-package com.awa.framework.core;
+
 
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
+import com.framework.core.OptionsManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -14,10 +15,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.SessionId;
-
-import com.awa.framework.helpers.ExcelHelper;
-import com.awa.framework.helpers.PropertiesHelper;
-import com.awa.framework.reporting.Reporter;
 
 /**
  * @author DragonWarrior-PC
