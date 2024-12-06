@@ -1,11 +1,24 @@
 Team Name : Explorers
 Team Members are :
 
-1. Henny
-2. Jamie
-3. Klaudio
-4. Klevisa
-5. Nickorey
-6. Oleksandr
-7. Sheila
-8. Suhrab
+dependencies
+1. Klaudio
+2: Klevisa
+3: Jamie
+4: Henny
+5: Sheila
+6: Nickorey
+7: Oleksandr
+8: Suhrab
+9: Amit
+=======
+1: Klaudio
+2: Klevisa
+3: Jamie
+4: Henny
+5: Sheila
+6: Nickorey
+7: Oleksandr
+8: Suhrab
+9: Amit
+ main
