@@ -22,7 +22,7 @@ public class BrowserManagerUsingExcel {
     PropertiesHelper configProperty = new PropertiesHelper("//resources//config.properties");
     ExcelHelper projectData = new ExcelHelper("\\src\\test\\resources\\com\\hrm\\data\\ProjectData.xlsx");
     PropertiesHelper urlHelper = new PropertiesHelper("//resources//url.properties");
-
+/*
     public void startBrowser() {
 
         String browserType = projectData.read("QA_SmokeTestURL").get("Browser").toLowerCase();
@@ -77,4 +77,6 @@ public class BrowserManagerUsingExcel {
     public static void quitBrowser() {
         getDriver().quit();
     }
+
+ */
 }

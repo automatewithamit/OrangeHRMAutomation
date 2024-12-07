@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class DBHelper {
+    /*
     PropertiesHelper dbConfigProperties = new PropertiesHelper("//resources//db-config.properties");
 
     public Map<String, String> readLoginTable() {
@@ -65,4 +66,6 @@ public class DBHelper {
     public String getPASS() {
         return dbConfigProperties.getProperty("PASS");
     }
+
+     */
 }

@@ -10,7 +10,7 @@ public class PropertiesHelper {
     Properties properties = new Properties();
     FileInputStream inputStream;
 
-
+/*
     public PropertiesHelper(String propertyFilePath) {
         System.out.println("Reading " + propertyFilePath);
 
@@ -60,4 +60,6 @@ public class PropertiesHelper {
             e.printStackTrace();
         }
     }
+
+ */
 }
