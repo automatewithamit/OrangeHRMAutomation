@@ -1,7 +1,7 @@
 /**
  *
  */
-package com.awa.framework.core;
+package com.framework.core;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -15,9 +15,9 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.SessionId;
 
-import com.awa.framework.helpers.ExcelHelper;
-import com.awa.framework.helpers.PropertiesHelper;
-import com.awa.framework.reporting.Reporter;
+import com.framework.helpers.ExcelHelper;
+import com.framework.helpers.PropertiesHelper;
+import com.framework.reporting.Reporter;
 
 /**
  * @author DragonWarrior-PC
