@@ -1,8 +1,8 @@
-package com.awa.framework.core;
+package com.framework.core;
 
 import org.testng.annotations.DataProvider;
 
-import com.awa.framework.helpers.ExcelHelper;
+import com.framework.helpers.ExcelHelper;
 
 public class DataProviders {
 

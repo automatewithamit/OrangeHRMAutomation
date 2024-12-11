@@ -1,6 +1,7 @@
 /**
  *
  */
+package com.framework.core;
 
 
 import java.net.MalformedURLException;
@@ -15,6 +16,10 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.SessionId;
+
+import com.framework.helpers.ExcelHelper;
+import com.framework.helpers.PropertiesHelper;
+import com.framework.reporting.Reporter;
 
 /**
  * @author DragonWarrior-PC
