@@ -4,35 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="b6484e5f-fee6-4422-bde9-591361debe2f" name="Changes" comment="lc12/3 for OrangeHRM">
+    <list default="true" id="b6484e5f-fee6-4422-bde9-591361debe2f" name="Changes" comment="merging main into nikorey branch">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-=======
-    <list default="true" id="b6484e5f-fee6-4422-bde9-591361debe2f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReadMe.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.txt" afterDir="false" />
->>>>>>> origin/main
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Timesheets.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Timesheets.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Nikorey" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="2pfk1XseHB1uAweq6WBi1GkOYlv" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -40,16 +37,11 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "#20 on Nikorey",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/klevi/OneDrive/Desktop/OrangeHRMAutomation/src/test/java"
+    "last_opened_file_path": "/Users/oleksandrkravets/Desktop/OrangeHRMAutomation/OrangeHRMAutomation"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\klevi\OneDrive\Desktop\OrangeHRMAutomation\src\test\java" />
-    </key>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -59,28 +51,37 @@
       <option name="presentableId" value="Default" />
       <updated>1733164302632</updated>
     </task>
-    <task id="LOCAL-00001" summary="lc12/3 for OrangeHRM">
+    <task id="LOCAL-00001" summary="timesheet.feature">
       <option name="closed" value="true" />
-      <created>1733266226250</created>
+      <created>1733943768956</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1733266226250</updated>
+      <updated>1733943768956</updated>
     </task>
-    <task id="LOCAL-00002" summary="lc12/3 for OrangeHRM">
+    <task id="LOCAL-00002" summary="timesheet">
       <option name="closed" value="true" />
-      <created>1733266267614</created>
+      <created>1733944313880</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1733266267614</updated>
+      <updated>1733944313880</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="merging main into nikorey branch">
+      <option name="closed" value="true" />
+      <created>1733945537603</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1733945537603</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Readme file updated" />
-    <MESSAGE value="lc12/3 for OrangeHRM" />
-    <option name="LAST_COMMIT_MESSAGE" value="lc12/3 for OrangeHRM" />
+    <MESSAGE value="timesheet.feature" />
+    <MESSAGE value="timesheet" />
+    <MESSAGE value="merging main into nikorey branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="merging main into nikorey branch" />
   </component>
 </project>
