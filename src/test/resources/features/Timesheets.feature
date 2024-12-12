@@ -1,11 +1,8 @@
-Feature: Timesheet and Attendance Management
+Feature: Timesheet Management
 
   Background:
-    Given the user is logged into OrangeHRM with the following credentials:
-      | Username | Admin     |
-      | Password | admin123  |
+    Given the user is logged into OrangeHRM with valid credentials
     And the system is functional and accessible
-
 
   # Timesheet Management Scenarios
   Scenario: Verify employee timesheet submission
