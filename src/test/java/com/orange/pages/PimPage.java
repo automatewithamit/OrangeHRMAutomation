@@ -22,3 +22,5 @@ public class PimPage {
 
         WebElement reportsMenu = driver.findElement(By.cssSelector("a[href='/web/index.php/pim/viewReports']"));
         reportsMenu.click();
+
+

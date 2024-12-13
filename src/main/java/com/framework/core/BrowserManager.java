@@ -19,12 +19,13 @@ import org.openqa.selenium.remote.SessionId;
 
 import com.framework.helpers.ExcelHelper;
 import com.framework.helpers.PropertiesHelper;
-import com.framework.reporting.Reporter;
+
 
 /**
  * @author DragonWarrior-PC
  *
  */
+
 public class BrowserManager {
     // Singleton Pattern --> There should be one and only one instance of any Object
 
@@ -139,3 +140,5 @@ public class BrowserManager {
         }
     }
 }
+
+

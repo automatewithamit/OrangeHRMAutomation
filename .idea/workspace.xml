@@ -4,16 +4,63 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6484e5f-fee6-4422-bde9-591361debe2f" name="Changes" comment="merging main into nikorey branch">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="b6484e5f-fee6-4422-bde9-591361debe2f" name="Changes" comment="lc12/12">
+      <change afterPath="$PROJECT_DIR$/src/test/java/Steps/DirectorySteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_11_24__8_40AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_11_24__8_40AM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_11_24__8_49AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_11_24__8_49AM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_11_24__8_49AM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_11_24__8_49AM__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_11_24__9_35AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_11_24__9_35AM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_5_2024_11_23_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_5_2024_11_23_AM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_5_2024_11_46_AM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_5_2024_11_46_AM__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_11_24__7_50AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_11_24__7_50AM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_11_24__8_03AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_11_24__8_03AM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_5_24__9_32AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_5_24__9_32AM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/framework/core/BrowserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/core/BrowserManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/framework/core/DataProviders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/core/DataProviders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/framework/core/ElementUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/core/ElementUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/framework/helpers/BrowserManagerUsingExcel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/helpers/BrowserManagerUsingExcel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/framework/helpers/ExcelHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/helpers/ExcelHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/framework/web_elements/Button.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/web_elements/Button.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/framework/web_elements/Canvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/web_elements/Canvas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/framework/web_elements/DropDown.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/web_elements/DropDown.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/framework/web_elements/Label.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/web_elements/Label.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/framework/web_elements/RadioButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/web_elements/RadioButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/framework/web_elements/TextBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/web_elements/TextBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/framework/web_elements/Toggle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/web_elements/Toggle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/framework/web_elements/WebLink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/web_elements/WebLink.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/framework/web_elements/WebTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/web_elements/WebTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Runners/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Runners/TestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Steps/TimesheetsSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Steps/TimesheetsSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/orange/pages/AdminPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/orange/pages/AdminPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/orange/pages/DashboardPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/orange/pages/DashboardPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/orange/pages/LeaveManagementPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/orange/pages/LeaveManagementPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/orange/pages/PerformancePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/orange/pages/PerformancePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/orange/pages/PimPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/orange/pages/PimPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/orange/pages/RecruitmentPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/orange/pages/RecruitmentPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/orange/pages/TimesheetsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/orange/pages/TimesheetsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/Features/AdminManagement.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/AdminManagement.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/Features/Dashboard.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Dashboard.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/Features/Directory.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Directory.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/Features/LeaveAdmin.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/LeaveAdmin.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/Features/LeaveEmployee.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/LeaveEmployee.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/Features/Performance.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Performance.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/Features/Pim.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Pim.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/Features/Recruitment.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Recruitment.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/Timesheets.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Timesheets.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -34,14 +81,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "#20 on Nikorey",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/oleksandrkravets/Desktop/OrangeHRMAutomation/OrangeHRMAutomation"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.TestRunner.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Klevisa__Timesheets&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/oleksandrkravets/Desktop/OrangeHRMAutomation/OrangeHRMAutomation&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager">
+    <configuration name="TestRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="OrangeHRMAutomation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Runners.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Runners" />
+      <option name="MAIN_CLASS_NAME" value="Runners.TestRunner" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestRunner" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -75,13 +145,33 @@
       <option name="project" value="LOCAL" />
       <updated>1733945537603</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="lc12/12">
+      <option name="closed" value="true" />
+      <created>1734046768804</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1734046768804</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="timesheet.feature" />
     <MESSAGE value="timesheet" />
     <MESSAGE value="merging main into nikorey branch" />
-    <option name="LAST_COMMIT_MESSAGE" value="merging main into nikorey branch" />
+    <MESSAGE value="lc12/12" />
+    <option name="LAST_COMMIT_MESSAGE" value="lc12/12" />
   </component>
 </project>

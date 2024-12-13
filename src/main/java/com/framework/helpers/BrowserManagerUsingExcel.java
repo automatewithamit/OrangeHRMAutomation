@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 public class BrowserManagerUsingExcel {
 
     WebDriver driver;
-
+/*
     private static ThreadLocal<WebDriver> localWebDriver = new ThreadLocal<>();
 
     OptionsManager optionsManager = new OptionsManager();
@@ -80,3 +80,6 @@ public class BrowserManagerUsingExcel {
 
  */
 }
+
+
+

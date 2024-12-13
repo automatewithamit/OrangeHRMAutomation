@@ -15,3 +15,5 @@ candidatesMenu.click();
 vacanciesMenu.click();
 
 }
+
+
