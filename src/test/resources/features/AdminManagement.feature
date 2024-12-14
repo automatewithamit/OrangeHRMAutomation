@@ -49,6 +49,15 @@ Feature: Admin User Management Functionality
     And the changes should be reflected in the "Users" list
 
 
+  Scenario: this is to make sure we understand working tree
+    When I select a user from the "Users" list
+    And I click the "Edit" button
+    And I update the user's role and status with new values
+    And I click the "Save" button
+    Then the updated role and status should be saved successfully
+    And the changes should be reflected in the "Users" list
+
+
   Scenario: Verify the system prevents editing multiple users at once
     When I select multiple users from the "Users" list
     And I click the "Edit" button
