@@ -1,23 +1,28 @@
 package com.orange.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
 
 public class DashboardPage {
 
-    WebElement dashboardMenu = driver.findElement(By.cssSelector("a[href='/web/index.php/dashboard/index']"));
-dashboardMenu.click();
+    private WebDriver driver;
 
-    WebElement helpMenu = driver.findElement(By.cssSelector("a[href='/web/index.php/help/viewHelpPage']"));
-helpMenu.click();
+    // Constructor to initialize WebDriver
+    public DashboardPage(WebDriver driver) {
+        this.driver = driver;
+    }
 
+    // Method to click the Dashboard Menu
+    public void clickDashboardMenu() {
+        WebElement dashboardMenu = driver.findElement(By.cssSelector("a[href='/web/index.php/dashboard/index']"));
+        dashboardMenu.click();
+    }
 
+    // Method to click the Help Menu
+    public void clickHelpMenu() {
+        WebElement helpMenu = driver.findElement(By.cssSelector("a[href='/web/index.php/help/viewHelpPage']"));
+        helpMenu.click();
+    }
 
 }
-
-
-

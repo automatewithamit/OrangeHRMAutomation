@@ -14,5 +14,4 @@ import io.cucumber.junit.CucumberOptions;
         dryRun = true  // If true, it checks the feature and step definitions without actually running the tests
 )
 public class TestRunner {
-    // No need for code here, as JUnit will run the tests
 }
