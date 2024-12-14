@@ -1,5 +1,6 @@
 package com.framework.web_elements;
 
+import com.framework.core.BrowserManager;
 import com.framework.core.ElementUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;

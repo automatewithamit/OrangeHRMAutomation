@@ -1,34 +1,45 @@
+@OHR-10
 Feature: Performance Module functionality
 
   Background:
     Given the user is navigated to OrangeHRM login page
-    When the user enters username "Admin" value and password "admin123" value
+    When the user enters username value and password value
     And the user clicks the login button
-    Then the user is successfully logged in
-    And the user clicks Performance in navigation panel
+    And the user is successfully logged in
+    Then the user clicks Performance in navigation panel
 
 
+  @AccessMyReviews
   Scenario: Verify employees can access My Reviews
     When the user clicks Manage Reviews
     And the user clicks My Reviews from dropdown
-    Then user can sucessfully view My Reviews
+    Then user can sucessfully access My Reviews
 
 
+  @CompleteSelf-Evaluation
+  Scenario: Verify employees can complete self-evaluation review
+    When the user clicks Manage Reviews
+    And the user clicks My Reviews from dropwdown
+    And the user clicks the Evaluate icon under My Reviews
+    When the user enters the ratings
+    And the users clicks Complete button and confirm submission with ok
+    Then the self-evaluation is succesfully saved
+
+
+  @AccessEmployeeTrackers
+  Scenario: Verify management can view Employee Trackers
+    When the user clicks Employee Trackers
+    And the user clicks the View icon
+    Then the user can sucessfully access the Employee Trackers
+
+
+  @AccessMyTrackers
   Scenario: Verify employees can access My Trackers
     When the user clicks My Trackers
-    Then the user can sucessfully view My Trackers
+    Then the user can sucessfully access My Trackers
 
 
-  Scenario: Verify management can add KPI’s
-    When the user clicks on Configure
-    And the user clicks on KPIs from the dropdown
-    And the user clicks the Add button under Key Perfromance Indicators for Job Title
-    When the user enters Key Performance Indicator Title
-    And the user selects Job Title from the dropdown
-    And the user clicks the Save button under Add Key Performance Indicator
-    Then the KPI is succesfully saved
-
-
+  @AddPerformanceTrackers
   Scenario: Verify management can add performance tracker for employees
     When the user clicks on Configure
     And the user clicks on Trackers from the dropdown
@@ -37,6 +48,28 @@ Feature: Performance Module functionality
     Then the performance tracker is successfully saved
 
 
+  @AddKPI
+  Scenario: Verify management can add KPI’s
+    When the user clicks on Configure
+    And the user clicks on KPIs from the dropdown
+    And the user clicks the Add button under Key Performance Indicators for Job Title
+    When the user enters Key Performance Indicator Title
+    And the user selects Job Title from the dropdown
+    And the user clicks the Save button under Add Key Performance Indicator
+    Then the KPI is succesfully saved
+
+
+  @KPI-NoJobTitle
+  Scenario: Verify management can add KPI with no Job Title
+    When the user clicks on Configure
+    And the user clicks on KPIs from the dropdown
+    And the user clicks the Add button under Key Performance Indicators for Job Title
+    When the user enters Key Performance Indicator Title
+    And the user clicks the Save button under Add Key Performance Indicator
+    Then error message will appear stating Job Title is Required
+
+
+  @AddPerformanceReviews
   Scenario: Verify management can add performance reviews/ratings for employees
     When the user clicks Manage Reviews
     And the user clicks Manage Reviews from the dropdown
@@ -47,19 +80,15 @@ Feature: Performance Module functionality
     Then the performance review is successfully saved
 
 
+  @AccessEmployeeReviews
   Scenario: Verify management can access Employee Reviews
     When the user clicks Manage Reviews
     And the user clicks Employee Reviews
-    And the user clicks the Evaluate icon
-    Then user can successfully view the Employees Review
+    And the user clicks the Evaluate icon under Employee Reviews
+    Then the user can successfully access the Employees Reviews
 
 
-  Scenario: Verify management can view Employee Trackers
-    When the user clicks Employee Trackers
-    And the user clicks the View icon
-    Then the user can sucessfully view the Employee Trackers
-
-
+  @CompleteEmployeeReviews
   Scenario: Verify management can complete employee reviews for employee
     When the user clicks Manage Reviews
     And the user clicks Employee Reviews
@@ -69,22 +98,8 @@ Feature: Performance Module functionality
     Then the Employee Review is sucessfully saved
 
 
-  Scenario: Verify employees can complete self-evaluation review
-    When the user clicks Manage Reviews
-    And the user clicks My Reviews
-    And the user clicks the Evaluate icon under My Reviews
-    When the user enters the ratings
-    And the users clicks Complete button and confirm submission with ok
-    Then the self-evaluation is succesfully saved
 
 
-  Scenario: Verify management can add KPI with no Job Title
-    When the user clicks on Configure
-    And the user clicks on KPIs from the dropdown
-    And the user clicks the Add button under Key Perfromance Indicators for Job Title
-    When the user enters Key Performance Indicator Title
-    And the user clicks the Save button under Add Key Performance Indicator
-    Then error message will appear stating Job Title is Required
 
 
 
