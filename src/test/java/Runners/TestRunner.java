@@ -1,17 +1,28 @@
 package Runners;
 
-import org.junit.runner.RunWith;
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
+import org.testng.annotations.DataProvider;
 
-@RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resources/features",  // Path to your feature files
-        glue = "Steps",  // Package where step definitions are stored
-        tags = "Timesheet",  // Optional: can be used to run specific tags (e.g., @TimesheetSubmission)
-        plugin = { "pretty", "html:target/cucumber-reports/cucumber.html", "json:target/cucumber-reports/cucumber.json" }, // Generates reports
-        monochrome = true,  // Makes the console output more readable
-        dryRun = true  // If true, it checks the feature and step definitions without actually running the tests
+        features = "src/test/resources/features", // Path to your feature files
+        glue = "Steps",                // Package containing step definitions
+        plugin = {
+                "pretty",                        // Prints Gherkin steps in console
+                "html:target/cucumber-reports/Cucumber.html", // HTML report
+                "json:target/cucumber-reports/Cucumber.json", // JSON report
+                "junit:target/cucumber-reports/Cucumber.xml"  // JUnit report
+        },
+        monochrome = true,                        // Makes console output readable
+        dryRun = false ,                          // Checks mapping between feature files and step definitions
+        tags = "@Timesheet"                       // Run scenarios tagged with @SmokeTest
 )
-public class TestRunner {
+public class TestRunner extends AbstractTestNGCucumberTests {
+
+    // Parallel execution support
+    @Override
+    @DataProvider(parallel = true)
+    public Object[][] scenarios() {
+        return super.scenarios();
+    }
 }

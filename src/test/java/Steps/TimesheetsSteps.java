@@ -5,10 +5,10 @@ import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 import io.cucumber.datatable.DataTable;
 
-import static org.junit.Assert.assertTrue;
+
 
 public class TimesheetsSteps {
-
+    //Page Objects
     // Background Steps
     @Given("the user is logged into OrangeHRM with the following credentials:")
     public void givenUserIsLoggedIntoOrangeHRMWithCredentials(DataTable credentials) {
