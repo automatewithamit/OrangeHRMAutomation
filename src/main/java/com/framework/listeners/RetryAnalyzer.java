@@ -1,9 +1,9 @@
 package com.framework.listeners;
 
 import com.framework.helpers.PropertiesHelper;
-import org.testng.ITestResult;
 import org.testng.IRetryAnalyzer;
-import org.testng.Reporter;
+import org.testng.ITestResult;
+
 
 public class RetryAnalyzer implements IRetryAnalyzer {
 

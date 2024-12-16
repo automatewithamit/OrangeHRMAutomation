@@ -4,6 +4,7 @@ package com.framework.core;
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
+import com.framework.reporting.Reporter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
