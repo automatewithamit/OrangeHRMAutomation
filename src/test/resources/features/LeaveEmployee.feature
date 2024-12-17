@@ -1,13 +1,13 @@
 Feature: Leave Module Functionality From Employee Login
 
-  Background:
+ Background:
     Given user is on the OrangeHRM app
     When user enters valid username "BluePurple" and valid password "BloodMoon123"
     And user clicks the login button
     Then user is logged into the application
     And navigates to the Leave Module
 
-  @TC01 @Employee
+  @TC01HK @EmpHK
   Scenario: Employee submit for a valid leave request and verify the status
     Given user has sufficient leave entitlement balance
     When user clicks the Apply tab
@@ -18,22 +18,22 @@ Feature: Leave Module Functionality From Employee Login
     When user navigates to the My Leave tab
     Then the leave request status is displayed as Pending Approval
 
-  @TC03 @Employee
+  @TC03HK @EmpHK
   Scenario: Cancel a scheduled leave and verify the status
     Given user has a Scheduled leave request
     When user clicks the My Leave tab
     And locates a leave request with the status Scheduled
     And clicks Cancel button
-    Then the leave status changes from Sheduled to Cancelled
+    Then the leave status changes from Scheduled to Cancelled
 
-  @TC04 @Employee
+  @TC04HK @EmpHK
   Scenario: View entitlement balances for all leave type
     Given user's entitlements have been configured by the Admin
     When user clicks the Entitlements tab
     And select My Entitlements from the dropdown
     Then the system displays entitlements balances and validity dates for each leave type
 
-  @TC05 @Employee
+  @TC05HT @EmployeeHT
   Scenario: View report based on leave period
     When user clicks on the Reports tab
     And selects My Leave Entitlements and Usage Report from the dropdown
