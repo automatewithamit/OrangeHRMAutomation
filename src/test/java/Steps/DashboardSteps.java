@@ -4,12 +4,13 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.WebDriver;
 
 public class DashboardSteps {
 
-
+WebDriver driver;
     @Given("the user logs in with {string} and {string}")
-    public void the_user_logs_in_with_and(String string, String string2) {
+    public void the_user_logs_in_with_and(String username, String password) {
     }
 
     @Given("the user is redirected to the dashboard page")
