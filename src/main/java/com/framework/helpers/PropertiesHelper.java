@@ -4,13 +4,14 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
+import com.framework.reporting.Reporter;
 
 public class PropertiesHelper {
 
     Properties properties = new Properties();
     FileInputStream inputStream;
 
-/*
+
     public PropertiesHelper(String propertyFilePath) {
         System.out.println("Reading " + propertyFilePath);
 
@@ -31,13 +32,16 @@ public class PropertiesHelper {
             properties.load(inputStream);
 
         } catch (FileNotFoundException e) {
-               Reporter.info("File not Found");
+
+            Reporter.info("File not Found");
             e.printStackTrace();
         } catch (IOException e) {
+
                Reporter.info("Error while reading the File");
             e.printStackTrace();
         } catch (Exception e) {
-               Reporter.info("Exception Occured while loading property File " + filePath);
+
+            Reporter.info("Exception Occured while loading property File " + filePath);
             e.printStackTrace();
         }
     }
@@ -50,16 +54,16 @@ public class PropertiesHelper {
             properties.load(inputStream);
 
         } catch (FileNotFoundException e) {
-              Reporter.info("File not Found");
+             // Reporter.info("File not Found");
             e.printStackTrace();
         } catch (IOException e) {
-               Reporter.info("Error while reading the File");
+              // Reporter.info("Error while reading the File");
             e.printStackTrace();
         } catch (Exception e) {
-               Reporter.info("Exception Occured while loading property File " + filePath);
+              // Reporter.info("Exception Occured while loading property File " + filePath);
             e.printStackTrace();
         }
     }
 
- */
+
 }
