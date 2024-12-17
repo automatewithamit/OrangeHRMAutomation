@@ -11,7 +11,7 @@ public class DashboardSteps {
 
 
 
-
+WebDriver driver;
     @Given("the user logs in with {string} and {string}")
     public void the_user_logs_in_with_and(String string, String string2) {
     }
