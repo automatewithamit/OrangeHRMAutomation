@@ -1,32 +1,65 @@
 package Steps;
 
+import Utils.ConfigReader;
+import com.orange.pages.LeaveManagementPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Test;
 
-public class LeaveAdminSteps {
+import java.time.Duration;
+
+public class LeaveAdminSteps extends LeaveManagementPage {
+
+    public LeaveAdminSteps(WebDriver driver) {
+        super(driver);
+    }
+
 
     //Background
     @Given("user is on the OrangeHRM app")
-    public void user_is_on_the_orange_hrm_app() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void user_is_on_the_orange_hrm_app () {
+
+        switch (ConfigReader.read("browser")) {
+            case "Chrome":
+                driver = new ChromeDriver();
+                break;
+            case "FireFox":
+                driver = new FirefoxDriver();
+                break;
+            case "Edge":
+                driver = new EdgeDriver();
+                break;
+            default:
+                throw new RuntimeException("Invalid Browser Name");
+        }
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        driver.manage().window().maximize();
+        driver.get(ConfigReader.read("url"));
     }
     @When("user enters valid username {string} and valid password {string}")
-    public void user_enters_valid_username_and_valid_password(String string, String string2) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void user_enters_valid_username_and_valid_password (String string, String string2){
+
+        enterCredential(ConfigReader.read("userName"), ConfigReader.read("password"));
+
     }
     @When("clicks the login button")
-    public void clicks_the_login_button() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void clicks_the_login_button () {
+        clickLogin();
     }
+
     @Then("user is logged into the application")
-    public void user_is_logged_into_the_application() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void user_is_logged_into_the_application () {
+        validateDashBoard();
     }
+
+
     @Then("navigates to the Leave Module")
     public void navigates_to_the_leave_module() {
         // Write code here that turns the phrase above into concrete actions

@@ -1,5 +1,6 @@
 Feature: Leave Module Functionality From Admin Login
 
+  @Henny
   Background:
     Given user is on the OrangeHRM app
     When user enters valid username "Admin" and valid password "admin123"
