@@ -14,7 +14,9 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 public class BrowserManager {
+    public BrowserManager(){
 
+    }
     WebDriver driver;
 
     private static ThreadLocal<WebDriver> localWebDriver = new ThreadLocal<>();
