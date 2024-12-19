@@ -1,10 +1,10 @@
-package com.orange.pages;
+package Pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class AdminPage {
+public class AdminPage extends BasePage {
 
     private WebDriver driver;
 
@@ -49,6 +49,8 @@ public class AdminPage {
         moreMenu.click();
     }
 }
+
+
 
 
 

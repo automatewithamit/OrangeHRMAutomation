@@ -1,7 +1,9 @@
 package com.framework.web_elements;
 
+import com.framework.constants.TimeDelay;
 import com.framework.core.BrowserManager;
 import com.framework.core.ElementUtil;
+import com.framework.reporting.Reporter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -42,3 +44,5 @@ public class WebLink {
     }
 
 }
+
+

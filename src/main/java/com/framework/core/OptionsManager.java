@@ -5,6 +5,8 @@ package com.framework.core;
 
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 /**
  * @author DragonWarrior-PC
@@ -31,7 +33,13 @@ public class OptionsManager {
         options.setCapability("browserVersion", "116.0.5845.111");
         return options;
     }
+    public FirefoxOptions getFirefoxOptions() {
+        FirefoxOptions options = new FirefoxOptions();
 
+        //options.addArguments("--remote-allow-origins=*");
+        options.setCapability("browserVersion", "116.0.5845.111");
+        return options;
+    }
 
 
 }

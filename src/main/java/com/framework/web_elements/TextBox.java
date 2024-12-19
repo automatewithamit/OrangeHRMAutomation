@@ -1,6 +1,7 @@
 package com.framework.web_elements;
 
 import com.framework.core.ElementUtil;
+import com.framework.reporting.Reporter;
 import org.openqa.selenium.By;
 
 public class TextBox {
@@ -70,3 +71,5 @@ public class TextBox {
     // isEnabled
 
 }
+
+

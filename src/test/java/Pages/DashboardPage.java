@@ -1,4 +1,4 @@
-package com.orange.pages;
+package Pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -24,4 +24,5 @@ public class DashboardPage {
         WebElement helpMenu = driver.findElement(By.cssSelector("a[href='/web/index.php/help/viewHelpPage']"));
         helpMenu.click();
     }
+
 }

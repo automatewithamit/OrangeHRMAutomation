@@ -1,4 +1,4 @@
-package com.orange.pages;
+package Pages;
 
 public class Header {
 
