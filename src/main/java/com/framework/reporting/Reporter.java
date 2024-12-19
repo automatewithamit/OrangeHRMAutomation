@@ -85,10 +85,10 @@ public class Reporter implements  ITestListener {
     }
 
     public static void info(String message) {
-        Log.info(message);
-        ExtentHelper.getTest().log(Status.INFO, message);
-        extentScreenShot();
-        ExtentHelper.getTest().info(message);
+//        Log.info(message);
+//        ExtentHelper.getTest().log(Status.INFO, message);
+//        extentScreenShot();
+//        ExtentHelper.getTest().info(message);
         //MediaEntityBuilder.createScreenCaptureFromBase64String(screenshotBase64).build());
     }
 

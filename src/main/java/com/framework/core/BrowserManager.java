@@ -22,13 +22,15 @@ public class BrowserManager {
     private static ThreadLocal<WebDriver> localWebDriver = new ThreadLocal<>();
 
     OptionsManager optionsManager = new OptionsManager();
-    PropertiesHelper configProperty = new PropertiesHelper("//resources//config.properties");
+    PropertiesHelper configProperty = new PropertiesHelper("/src/test/resources/config/config.properties");
     ExcelHelper projectData = new ExcelHelper("\\src\\test\\resources\\com\\hrm\\data\\ProjectData.xlsx");
-    PropertiesHelper urlHelper = new PropertiesHelper("//resources//url.properties");
+    //PropertiesHelper urlHelper = new PropertiesHelper("//resources//url.properties");
 
     public void startBrowser() {
 
-        String browserType = projectData.read("QA_SmokeTestURL").get("Browser").toLowerCase();
+
+
+        String browserType = configProperty.getProperty("browserType").toLowerCase();
         boolean isRemote = Boolean.parseBoolean(configProperty.getProperty("isRemote").toLowerCase());
         Reporter.info("Starting Browser.... " + browserType);
 
@@ -55,7 +57,7 @@ public class BrowserManager {
     }
 
     public void startRemoteDriver(String browserType) {
-        String remoteUrl = urlHelper.getProperty("hubURL");
+        //String remoteUrl = urlHelper.getProperty("hubURL");
         DesiredCapabilities capabilities = new DesiredCapabilities();
         if (browserType.equalsIgnoreCase("chrome")) {
             capabilities.setBrowserName("chrome");
@@ -66,7 +68,8 @@ public class BrowserManager {
         }
 
         try {
-            localWebDriver.set(new RemoteWebDriver(new URL(remoteUrl), capabilities));
+            localWebDriver.set(new RemoteWebDriver(new URL(""), capabilities));
+            //localWebDriver.set(new RemoteWebDriver(new URL(remoteUrl), capabilities));
         } catch (MalformedURLException e) {
             Reporter.info("MalFormed Exception Occurred ");
         }
@@ -77,7 +80,7 @@ public class BrowserManager {
         return localWebDriver.get();
     }
 
-    public static void quitBrowser() {
+    public void quitBrowser() {
         getDriver().quit();
     }
 

@@ -3,6 +3,7 @@ package com.framework.helpers;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.sql.SQLOutput;
 import java.util.Properties;
 import com.framework.reporting.Reporter;
 
@@ -28,6 +29,8 @@ public class PropertiesHelper {
         try {
 
             String dir = System.getProperty("user.dir");
+            System.out.println("File Path: " + dir + filePath);
+
             inputStream = new FileInputStream(dir + filePath);
             properties.load(inputStream);
 
