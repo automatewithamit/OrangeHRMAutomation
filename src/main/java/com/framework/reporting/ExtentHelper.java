@@ -19,7 +19,8 @@ public class ExtentHelper {
 
         ExtentSparkReporter reporter = new ExtentSparkReporter(projectDir+ reportPath + "\\" + reportName);
         try {
-            reporter.loadXMLConfig(new File(projectDir + "//resources//spark-config.xml"));
+            System.out.println(projectDir + "/src/test/resources/config//");
+            reporter.loadXMLConfig(new File(projectDir + "/src/test/resources/config/spark-config.xml"));
         } catch (IOException e) {
             Reporter.info("Not able to fetch the Extent Report...");
         }
@@ -27,6 +28,7 @@ public class ExtentHelper {
         extentReports.attachReporter(reporter);
         // extentReports.setSystemInfo("Blog Name", "SW Test Academy");
         // extentReports.setSystemInfo("Author", "Onur Baskirt");
+        System.out.println("I am here while creating reports");
         return extentReports;
     }
 
@@ -44,12 +46,12 @@ public class ExtentHelper {
 
         return test;
     }
-
-// public static synchronized void endTest() {
-//
-//	 extentReports.test;
-//
-//    }
+    public static synchronized void endTest() {
+        ExtentTest test = getTest();
+        if (test != null) {
+            Reporter.info("Ending test: " + test.getModel().getName());
+        }
+    }
 
     public static synchronized void endReport() {
 
