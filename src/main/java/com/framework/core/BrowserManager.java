@@ -13,11 +13,21 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
+
+
+//SOLID
+//S-> SRE-> Single Responsibility Principle
+//O-> OCP-> Open Closed Principle --> Any Class or Method should be Open for Extension and Closed for
+//Modification
+//L->Liskov Substitution Principle
+//I->Interface Segregation Principle
+//D->Dependency Inversion Principle
+
 public class BrowserManager {
     public BrowserManager(){
 
     }
-    WebDriver driver;
+
 
     private static ThreadLocal<WebDriver> localWebDriver = new ThreadLocal<>();
 
