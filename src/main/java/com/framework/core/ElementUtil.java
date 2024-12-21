@@ -4,6 +4,7 @@ package com.framework.core;
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
+import com.framework.reporting.Reporter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
@@ -12,12 +13,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.framework.reporting.Reporter;
+//import com.framework.reporting.Reporter;
 
 /*
  * This class is a Wrapper class aroung Selenium's Basic methods like findElement ,
  *  findElements and many more.
  */
+
 public final class ElementUtil {
 
     public static WebElement findElement(By locator) {
@@ -150,3 +152,5 @@ public final class ElementUtil {
         return isDisplayed;
     }
 }
+
+

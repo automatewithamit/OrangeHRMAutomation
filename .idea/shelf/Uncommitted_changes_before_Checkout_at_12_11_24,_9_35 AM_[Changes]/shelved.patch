@@ -1,0 +1,64 @@
+Index: .idea/vcs.xml
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+deleted file mode 100644
+--- a/.idea/vcs.xml	(revision 59845617729e9c6d05bf7ba8271887df186f63ba)
++++ /dev/null	(revision 59845617729e9c6d05bf7ba8271887df186f63ba)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="VcsDirectoryMappings">
+-    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"b6484e5f-fee6-4422-bde9-591361debe2f\" name=\"Changes\" comment=\"\">\n      <change beforePath=\"$PROJECT_DIR$/src/test/resources/Features/Timesheets.feature\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/resources/Features/Timesheets.feature\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 7\n}</component>\n  <component name=\"ProjectId\" id=\"2pfk1XseHB1uAweq6WBi1GkOYlv\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"git-widget-placeholder\": \"Merging HelpersPackageHenny\",\n    \"kotlin-language-version-configured\": \"true\",\n    \"last_opened_file_path\": \"/Users/oleksandrkravets/Desktop/OrangeHRMAutomation/OrangeHRMAutomation\"\n  }\n}]]></component>\n  <component name=\"SharedIndexes\">\n    <attachedChunks>\n      <set>\n        <option value=\"jdk-22-openjdk-22-3183f394aec4-bad0321e\" />\n      </set>\n    </attachedChunks>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"b6484e5f-fee6-4422-bde9-591361debe2f\" name=\"Changes\" comment=\"\" />\n      <created>1733164302632</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1733164302632</updated>\n    </task>\n    <servers />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 59845617729e9c6d05bf7ba8271887df186f63ba)
++++ b/.idea/workspace.xml	(date 1733925332691)
+@@ -27,7 +27,6 @@
+   <component name="PropertiesComponent"><![CDATA[{
+   "keyToString": {
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "git-widget-placeholder": "Merging HelpersPackageHenny",
+     "kotlin-language-version-configured": "true",
+     "last_opened_file_path": "/Users/oleksandrkravets/Desktop/OrangeHRMAutomation/OrangeHRMAutomation"
+   }
+@@ -50,4 +49,7 @@
+     </task>
+     <servers />
+   </component>
++  <component name="VcsManagerConfiguration">
++    <option name="LAST_COMMIT_MESSAGE" value="" />
++  </component>
+ </project>
+\ No newline at end of file
+Index: src/test/resources/Features/Timesheets.feature
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>Feature: Timesheet Management\n\n  Background:\n    Given the user is logged into OrangeHRM with valid credentials\n    And the system is functional and accessible\n\n  # Timesheet Management Scenarios\n  Scenario: Verify employee timesheet submission\n    When the employee navigates to \"My Timesheets\"\n    And updates the timesheet hours\n    And submits the timesheet for approval\n    Then the timesheet should be submitted successfully\n    And the status should update to \"Pending Approval\"\n\n  Scenario: Verify manager approval of timesheets\n    When the manager navigates to \"Employee Timesheets\"\n    And opens a pending timesheet\n    And approves the timesheet\n    Then the timesheet status should update to \"Approved\"\n    And a notification should be sent to the employee\n\n  Scenario: Verify rejection of timesheets with comments\n    When the manager navigates to \"Employee Timesheets\"\n    And opens a pending timesheet\n    And rejects the timesheet with comments\n    Then the timesheet status should update to \"Rejected\"\n    And the comments should be sent to the employee\n\n  Scenario: Verify employee punch in/out functionality\n    When the employee navigates to \"Punch In/Out\"\n    And enters the punch-in/punch-out time\n    And clicks \"Save\"\n    Then the attendance record should be saved successfully\n\n  Scenario: Verify attendance records display\n    When the employee navigates to \"My Records\"\n    And selects a specific date range\n    Then the attendance records for the selected range should be displayed correctly\n\n  # Attendance Management Scenarios\n  Scenario: Verify manager view of attendance records\n    When the manager navigates to \"Employee Records\"\n    And searches for an employee\n    And selects a date range\n    Then the attendance records for the selected employee should be displayed correctly\n\n  Scenario: Verify attendance settings configuration\n    When the admin navigates to \"Configuration\"\n    And updates the attendance settings (e.g., punch-in policy)\n    And saves the changes\n    Then the attendance settings should be updated successfully\n\n  # Report Generation Scenarios\n  Scenario: Verify generation of project reports\n    When the manager navigates to \"Project Reports\"\n    And selects a specific project\n    And generates the report\n    Then the project report should be displayed correctly\n\n  Scenario: Verify generation of employee reports\n    When the manager navigates to \"Employee Reports\"\n    And selects an employee and a date range\n    And generates the report\n    Then the employee report should be displayed correctly\n\n  Scenario: Verify generation of attendance summaries\n    When the manager navigates to \"Attendance Summary\"\n    And selects appropriate filters\n    And generates the summary\n    Then the attendance summary should be displayed correctly\n\n  # Data Management Scenarios\n  Scenario: Verify customer record management\n    When the admin navigates to \"Customers\"\n    And adds or edits a customer record\n    And saves the changes\n    Then the customer record should be updated successfully\n\n  Scenario: Verify project record management\n    When the manager navigates to \"Projects\"\n    And adds or edits a project record\n    And saves the changes\n    Then the project record should be updated successfully\n\n  Scenario: Verify validation for empty fields\n    When the user navigates to \"My Timesheets\" or \"Employee Timesheets\"\n    And leaves required fields empty during submission or approval\n    Then a validation message should be displayed\n\n  # System Performance Scenarios\n  Scenario: Verify system performance with large datasets\n    Given the system contains 1000+ records\n    When the user navigates to \"Employee Timesheets\" or \"Reports\"\n    Then the system should handle large datasets without errors or delays\n\n  Scenario: Verify concurrent actions on timesheets\n    Given two users are logged into OrangeHRM with valid credentials\n    When both users attempt to approve or reject the same timesheet simultaneously\n    Then the system should handle concurrent actions without conflicts\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/resources/Features/Timesheets.feature b/src/test/resources/Features/Timesheets.feature
+--- a/src/test/resources/Features/Timesheets.feature	(revision 59845617729e9c6d05bf7ba8271887df186f63ba)
++++ b/src/test/resources/Features/Timesheets.feature	(date 1733925240142)
+@@ -1,4 +1,4 @@
+-Feature: Timesheet Management
++Feature: Timesheet and Attendance Management
+ 
+   Background:
+     Given the user is logged into OrangeHRM with valid credentials
+@@ -96,4 +96,4 @@
+   Scenario: Verify concurrent actions on timesheets
+     Given two users are logged into OrangeHRM with valid credentials
+     When both users attempt to approve or reject the same timesheet simultaneously
+-    Then the system should handle concurrent actions without conflicts
++    Then the system should handle concurrent actions without conflicts
+\ No newline at end of file
