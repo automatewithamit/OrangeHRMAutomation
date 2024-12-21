@@ -1,4 +1,4 @@
-Feature: Timesheet and Attendance Management
+Feature: Timesheet Management
 
   Background:
     Given the user is logged into OrangeHRM with valid credentials
