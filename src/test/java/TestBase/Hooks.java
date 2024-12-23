@@ -36,7 +36,6 @@ public class Hooks {
 
     @AfterAll
     public static void tearDown(){
-
         ExtentHelper.endReport();
     }
     }
