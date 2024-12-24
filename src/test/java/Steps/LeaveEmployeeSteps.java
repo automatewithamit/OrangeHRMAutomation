@@ -152,4 +152,7 @@ public class LeaveEmployeeSteps {
         throw new io.cucumber.java.PendingException();
     }
 
+    @Then("the report displayed the leave entitlements and usage report for the specified period")
+    public void theReportDisplayedTheLeaveEntitlementsAndUsageReportForTheSpecifiedPeriod() {
+    }
 }

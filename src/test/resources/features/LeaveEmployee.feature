@@ -7,18 +7,18 @@ Feature: Leave Module Functionality From Employee Login
     Then user is logged into the application
     And navigates to the Leave Module
 
-  @TC01HK @EmpHK
+  @TC01HK @LeaveEmp_01 @NotTested
   Scenario: Employee submit for a valid leave request and verify the status
     Given user has sufficient leave entitlement balance
     When user clicks the Apply tab
     And selects a valid Leave Type "CAN FMLA"
-    And enters a valid date range "Dec 16 to Dec 20"
+    And enters a valid date range "Dec 30 to Dec 31"
     And clicks Apply button
     Then the leave request is successfully saved
     When user navigates to the My Leave tab
     Then the leave request status is displayed as Pending Approval
 
-  @TC03HK @EmpHK
+  @TC03HK @LeaveEmp_03 @NotTested
   Scenario: Cancel a scheduled leave and verify the status
     Given user has a Scheduled leave request
     When user clicks the My Leave tab
@@ -26,14 +26,14 @@ Feature: Leave Module Functionality From Employee Login
     And clicks Cancel button
     Then the leave status changes from Scheduled to Cancelled
 
-  @TC04HK @EmpHK
+  @TC04HK @LeaveEmp_04 @NotTested
   Scenario: View entitlement balances for all leave type
     Given user's entitlements have been configured by the Admin
     When user clicks the Entitlements tab
     And select My Entitlements from the dropdown
     Then the system displays entitlements balances and validity dates for each leave type
 
-  @TC05HT @EmployeeHT
+  @TC05HT @LeaveEmp_05 @NotTested
   Scenario: View report based on leave period
     When user clicks on the Reports tab
     And selects My Leave Entitlements and Usage Report from the dropdown

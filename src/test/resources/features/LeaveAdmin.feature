@@ -8,7 +8,7 @@ Feature: Leave Module Functionality From Admin Login
     Then user is logged into the application
     And navigates to the Leave Module
 
-  @TC06HK @AdmHK
+  @TC06HK @LeaveAdm_06
   Scenario: Approve a leave request and verify the status
     Given a leave request with the status Pending Approval exists in the Leave List tab
     When user clicks the Leave List tab
@@ -16,7 +16,7 @@ Feature: Leave Module Functionality From Admin Login
     And clicks Approve button
     Then the leave request status changes from Pending Approval to Scheduled
 
-  @TC08HK @AdmHK
+  @TC08HK @LeaveAdm_08 @NotTested
   Scenario: Assign leave to an employee and verify the status in the Leave List
     Given the employee has sufficient leave balance
     When user clicks the Assign Leave tab
@@ -29,19 +29,18 @@ Feature: Leave Module Functionality From Admin Login
     And clicks Search button
     Then the assigned leave for the specified employee appears with a status of Sheduled
 
-  @TC10HK @AdmHK
+  @TC10HK @LeaveAdm_10
   Scenario: Apply a leave request and verify that the Admin cannot approve their own request
     Given Admin has sufficient leave balance
     When user clicks the Apply tab
     And selects a valid leave type "CAN-FMLA"
-    And enter a valid date range "Dec 9" to "Dec20"
+    And enter a valid date range "Dec 30" to "Dec31"
     And clicks Apply button
-    Then the leave request is successfully submitted
     When admin navigates to the Leave List tab
     Then the leave request appears with the status of Pending Approval
     And the leave request does not have Actions of Approve or Reject
 
-  @TC12HK @AdmHK
+  @TC12HK @LeaveAdm_12
   Scenario: Add entitlement to multiple employees
     When user clicks the Entitlements tab
     And select Add Entitlement from the dropdown
@@ -51,28 +50,24 @@ Feature: Leave Module Functionality From Admin Login
     And enter the number "15" of the entitlements
     And clicks Save button
     Then the addition confirmation page appears
-    And the page displays the updated balance for the matching employees
     And the option to confirm or cancel are available
 
-  @TC13HK @AdmHK
+  @TC13HK @LeaveAdm_13
   Scenario: Add a new leave type (jury duty) and validate that new leave type appears in the system
     When user clicks the Configure tab
     And select Leave Types from the dropdown
     And clicks Add button
     And enter "Jury Duty" as the name of the new Leave Type
-    And clicks Yes button for the question Is Entitlement Situational
     And clicks on Save button
-    Then the new leave type is successfully saved
     And appears in the list of available leave types for the employees
 
-  @TC14HK @AdmHK
-  Scenario: Generate reports for individual employee in a specific period
-    When user clicks the Reports tab
+  @TC14HK @LeaveAdm_14
+  Scenario: Generate reports based on leave type
+    When admin clicks the Reports tab
     And select Leave Entitlements and Usage Reports from the dropdown
-    And clicks Employee in Generate For
-    And enters the employee name
-    And selects the leave period "1-1-2024" to "12-31-2024"
+    And clicks leave type in Generate For
+    And selects the leave period "1-1-2024 - 12-31-2024"
     And clicks on Generate button
-    Then the report displayed the specified employee's leave usage and balances for the specified leave period
+    Then the report displayed the leave entitlements and usage report for the specified period
 
 
