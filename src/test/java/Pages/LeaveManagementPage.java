@@ -10,7 +10,7 @@ import org.testng.Assert;
 
 import java.util.List;
 
-public class LeaveManagementPage {
+public class LeaveManagementPage extends Header{
 
     public WebDriver driver;
 
