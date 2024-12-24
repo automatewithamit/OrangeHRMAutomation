@@ -1,12 +1,11 @@
 Feature: Leave Module Functionality From Admin Login
 
-  @Henny
-  Background:
-    Given user is on the OrangeHRM app
-    When user enters valid username "Admin" and valid password "admin123"
-    And clicks the login button
-    Then user is logged into the application
-    And navigates to the Leave Module
+Background:
+  Given user is on the OrangeHRM app
+  When user enters valid username "Admin" and valid password "admin123"
+  And clicks the login button
+  Then user is logged into the application
+  And navigates to the Leave Module
 
   @TC06HK @LeaveAdm_06
   Scenario: Approve a leave request and verify the status
