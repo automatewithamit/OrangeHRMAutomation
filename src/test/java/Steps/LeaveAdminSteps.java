@@ -17,11 +17,11 @@ import static com.framework.core.BrowserManager.getDriver;
 public class LeaveAdminSteps{
     LeaveManagementPage leaveManagementPage = new LeaveManagementPage();
     //Background
-    @Given("user is on the OrangeHRM app")
-    public void user_is_on_the_orange_hrm_app () {
-
-        getDriver().navigate().to(ConfigReader.read("url"));
-    }
+//    @Given("user is on the OrangeHRM app")
+//    public void user_is_on_the_orange_hrm_app () {
+//
+//        getDriver().navigate().to(ConfigReader.read("url"));
+//    }
     @When("user enters valid username {string} and valid password {string}")
     public void user_enters_valid_username_and_valid_password (){
 
@@ -33,16 +33,16 @@ public class LeaveAdminSteps{
         leaveManagementPage.clickLogin();
     }
 
-    @Then("user is logged into the application")
-    public void user_is_logged_into_the_application () {
-        leaveManagementPage.validateDashBoard();
-    }
+//    @Then("user is logged into the application")
+//    public void user_is_logged_into_the_application () {
+//        leaveManagementPage.validateDashBoard();
+//    }
 
 
-    @Then("navigates to the Leave Module")
-    public void navigates_to_the_leave_module() {
-        leaveManagementPage.clickLeaveMenu();
-    }
+//    @Then("navigates to the Leave Module")
+//    public void navigates_to_the_leave_module() {
+//        leaveManagementPage.clickLeaveMenu();
+//    }
 
     //TC06HK @LeaveAdm_06
     @Given("a leave request with the status Pending Approval exists in the Leave List tab")
@@ -115,10 +115,10 @@ public class LeaveAdminSteps{
     public void admin_has_sufficient_leave_balance() {
         leaveManagementPage.validateAdmEntitlement();
     }
-    @When("user clicks the Apply tab")
-    public void user_clicks_the_apply_tab() {
-        leaveManagementPage.clickApplyMenu();
-    }
+//    @When("user clicks the Apply tab")
+//    public void user_clicks_the_apply_tab() {
+//        leaveManagementPage.clickApplyMenu();
+//    }
     @When("selects a valid leave type {string}")
     public void selects_a_valid_leave_type() throws InterruptedException {
         leaveManagementPage.applyLeaveType();
@@ -131,10 +131,10 @@ public class LeaveAdminSteps{
         Thread.sleep(1000);
         leaveManagementPage.enterEndDate();
     }
-    @When("clicks Apply button")
-    public void clicks_apply_button() {
-        leaveManagementPage.clickApplyBtn();
-    }
+//    @When("clicks Apply button")
+//    public void clicks_apply_button() {
+//        leaveManagementPage.clickApplyBtn();
+//    }
 
     @When("admin navigates to the Leave List tab")
     public void admin_navigates_to_the_leave_list_tab() {
@@ -150,10 +150,10 @@ public class LeaveAdminSteps{
     }
 
     //TC12HK @LeaveAdm_12
-    @When("user clicks the Entitlements tab")
-    public void user_clicks_the_entitlements_tab() {
-        leaveManagementPage.clickEntitlementsMenu();
-    }
+//    @When("user clicks the Entitlements tab")
+//    public void user_clicks_the_entitlements_tab() {
+//        leaveManagementPage.clickEntitlementsMenu();
+//    }
     @When("select Add Entitlement from the dropdown")
     public void select_add_entitlement_from_the_dropdown() {
         leaveManagementPage.selectAddEntitlements();
