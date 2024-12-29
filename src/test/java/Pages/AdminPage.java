@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import static com.framework.core.BrowserManager.getDriver;
 import org.openqa.selenium.WebElement;
 
-public class AdminPage extends BasePage {
+public class AdminPage extends Header {
 
 
     // Method to click the Admin Menu
