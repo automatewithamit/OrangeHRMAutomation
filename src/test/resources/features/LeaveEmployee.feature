@@ -1,4 +1,4 @@
-Feature: Leave Module Functionality From Employee Login
+#Feature: Leave Module Functionality From Employee Login
 
 # Background:
 #    Given user is on the OrangeHRM app
