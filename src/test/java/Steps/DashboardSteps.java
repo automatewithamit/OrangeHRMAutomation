@@ -19,28 +19,28 @@ import java.time.Duration;
 import java.util.List;
 
 import static com.framework.constants.Constants.*;
+import static com.framework.core.BrowserManager.getDriver;
 import static org.testng.AssertJUnit.*;
 
 public class DashboardSteps {
-    WebDriver driver;
+    //WebDriver driver = getDriver();
     DashboardPage dashboardPage = new DashboardPage();
 
     @Given("the user logs in with {string} and {string}")
-    public void the_user_logs_in_with_and() {
-        WebDriver driver = Hooks.getDriver();
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        driver.get(BASE_URL);
+    public void the_user_logs_in_with_and(String username, String password) {
+
+        getDriver().get(BASE_URL);
 
 
-        WebElement usernameField = driver.findElement(By.id("username"));
+        WebElement usernameField = getDriver().findElement(By.xpath("//input[@placeholder='Username']"));
         usernameField.clear();
         usernameField.sendKeys(USERNAME);
 
-        WebElement passwordField = driver.findElement(By.id("password"));
+        WebElement passwordField = getDriver().findElement(By.xpath("//input[@placeholder='Password']"));
         passwordField.clear();
         passwordField.sendKeys(PASSWORD);
 
-        WebElement loginButton = driver.findElement(By.id("loginButton"));
+        WebElement loginButton = getDriver().findElement(By.cssSelector("button[type='submit']"));
         loginButton.click();
 
     }
@@ -69,9 +69,40 @@ public class DashboardSteps {
 
     }
 
-    @Then("the navigation menu should be functional")
-    public void the_navigation_menu_should_be_functional() {
-        dashboardPage.isNavigationMenuFunctional();
+    //@Then("the navigation menu should be functional")
+    //public void the_navigation_menu_should_be_functional() {
+    //dashboardPage.isNavigationMenuFunctional();
+
+    @Given("the navigational panel is in an expanded state")
+    public void the_navigational_panel_is_in_an_expanded_state() {
+         dashboardPage.isNavigationalPanelExpanded();
+       // assertTrue("The navigational panel is not in an expanded state.", isExpanded);
 
     }
+
+    @When("the user clicks the panel toggle button")
+    public void the_user_clicks_the_panel_toggle_button() {
+        dashboardPage.isPanelButtonClickable();
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+
+    @Then("the navigational panel should collapse smoothly")
+    public void the_navigational_panel_should_collapse_smoothly() {
+        dashboardPage.isNavigationalPanelCollapsable();
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+
+    @Then("the toggle button should remain visible")
+    public void the_toggle_button_should_remain_visible() {
+        dashboardPage.isButtonVisible();
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
 }
+
+
+
+
+

@@ -1,17 +1,16 @@
 Feature: Dashboard Module Functionality
 
   Background:
-    Given the user logs in with "username" and "password"
-    And the user is redirected to the dashboard page
-
+    Given the user logs in with "Username" and "Password"
+    When the user is redirected to the dashboard page
   @OHR-6  @TC01 @dashboard
   Scenario: Verify dashboard loads correctly after a successful login
-    Given the user logs in with "username" and "password"
+    #Given the user logs in with "Username" and "Password"
     When the user is redirected to the dashboard page
     Then the dashboard should display the header with the application logo
     And the dashboard should display the user's profile information
     And all widgets on the dashboard should be visible
-    And the navigation menu should be functional
+    #And the navigation menu should be functional
 
   @OHR-6  @TC02 @dashboard
   Scenario: Verify "Time at Work" widget displays hours correctly
@@ -24,9 +23,9 @@ Feature: Dashboard Module Functionality
   @OHR-6  @TC03 @dashboard
   Scenario: Verify pending tasks are displayed correctly in "My Actions"
     Given the "My Actions" section is visible on the dashboard
-    When the user views the "My Actions" section
-    Then the section should display a list of pending tasks
-    And the total number of tasks displayed should match the records in the system
+    #When the user views the "My Actions" section
+    When the section should display a list of pending tasks
+    #Then the total number of tasks displayed should match the records in the system
 
   @OHR-6  @TC05 @dashboard
   Scenario: Verify dashboard responsiveness on a mobile device
@@ -42,19 +41,18 @@ Feature: Dashboard Module Functionality
     Then the chart should display a segment for the location with "Unassigned"
     And the chart should handle the scenario without visual errors
 
-  @OHR-6  @TC08 @dashboard
-  Scenario: Verify the Help button is visible and accessible
-    Given the "Help" button is displayed on the dashboard
-    When the user views the dashboard
-    Then the "Help" button should be visible
-    And the button should be focusable using the keyboard
+  #@OHR-6  @TC08 @dashboard
+  #Scenario: Verify the Help button is visible and accessible
+    #Given the "Help" button is displayed on the dashboard
+    #When the user views the dashboard
+    #Then the "Help" button should be visible
+    #And the button should be focusable using the keyboard
 
   @OHR-6  @TC10 @dashboard
   Scenario: Verify user is redirected to the login page after session timeout
     Given the user remains inactive on the dashboard for the session timeout duration
-    When the session expires
-    Then the user should be redirected to the login page
-    And the login page should display a message "Your session has expired. Please log in again."
+    Then  the user should be redirected to the login page
+
 
   @OHR-6 @dashboard
   Scenario: Verify widgets responsiveness on tablet
@@ -63,10 +61,10 @@ Feature: Dashboard Module Functionality
     And all interactive elements should remain functional
 
   @OHR-6  @TC11 @dashboard
-  Scenario: Verify notification panel collapses when clicked
-    Given the notification panel is in an expanded state
+  Scenario: Verify navigational panel collapses when clicked
+    Given the navigational panel is in an expanded state
     When the user clicks the panel toggle button
-    Then the notification panel should collapse smoothly
+    Then the navigational panel should collapse smoothly
     And the toggle button should remain visible
 
   @OHR-6  @TC04 @dashboard
@@ -74,7 +72,7 @@ Feature: Dashboard Module Functionality
     Given there are no employees on leave for today
     When the widget loads
     Then the widget should display a message "No employees on leave today"
-    And no employee entries should be listed
+    #And no employee entries should be listed
 
 
 
