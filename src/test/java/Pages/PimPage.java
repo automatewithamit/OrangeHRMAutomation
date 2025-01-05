@@ -1,10 +1,10 @@
-package com.orange.pages;
+package Pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class PimPage {
+public class PimPage extends Header{
 
     private WebDriver driver;
 
