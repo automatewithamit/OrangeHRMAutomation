@@ -1,0 +1,167 @@
+Index: .idea/shelf/Uncommitted_changes_before_Merge_at_12_5_2024_11_46_AM__Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Merge_at_12_5_2024_11_46_AM__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Merge_at_12_5_2024_11_46_AM__Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Merge_at_12_5_2024_11_46_AM__Changes_.xml	(revision c1080fa153fd50b41efd7b8533e4ffe56a4c8431)
++++ /dev/null	(revision c1080fa153fd50b41efd7b8533e4ffe56a4c8431)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Merge_at_12_5_2024_11_46_AM_[Changes]" date="1733417233145" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_5_2024_11_46_AM_[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Merge at 12/5/2024 11:46 AM [Changes]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Merge_at_12_5_2024_11_46_AM_[Changes]/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Merge_at_12_5_2024_11_46_AM_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Merge_at_12_5_2024_11_46_AM_[Changes]/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Merge_at_12_5_2024_11_46_AM_[Changes]/shelved.patch	(revision c1080fa153fd50b41efd7b8533e4ffe56a4c8431)
++++ /dev/null	(revision c1080fa153fd50b41efd7b8533e4ffe56a4c8431)
+@@ -1,28 +0,0 @@
+-Index: .idea/workspace.xml
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"b6484e5f-fee6-4422-bde9-591361debe2f\" name=\"Changes\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/ReadMe.txt\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/ReadMe.txt\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 7\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2pfk1XseHB1uAweq6WBi1GkOYlv\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"git-widget-placeholder\": \"main\",\r\n    \"kotlin-language-version-configured\": \"true\",\r\n    \"last_opened_file_path\": \"/Users/oleksandrkravets/Desktop/OrangeHRMAutomation/OrangeHRMAutomation\"\r\n  }\r\n}]]></component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"b6484e5f-fee6-4422-bde9-591361debe2f\" name=\"Changes\" comment=\"\" />\r\n      <created>1733164302632</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1733164302632</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n</project>
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+---- a/.idea/workspace.xml	(revision 6c364aa968a6d7f0bb8c3c8c4b5ef93951a63dff)
+-+++ b/.idea/workspace.xml	(date 1733417186909)
+-@@ -5,7 +5,7 @@
+-   </component>
+-   <component name="ChangeListManager">
+-     <list default="true" id="b6484e5f-fee6-4422-bde9-591361debe2f" name="Changes" comment="">
+--      <change beforePath="$PROJECT_DIR$/ReadMe.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.txt" afterDir="false" />
+-+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-     </list>
+-     <option name="SHOW_DIALOG" value="false" />
+-     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+-@@ -27,7 +27,7 @@
+-   <component name="PropertiesComponent"><![CDATA[{
+-   "keyToString": {
+-     "RunOnceActivity.ShowReadmeOnStart": "true",
+--    "git-widget-placeholder": "main",
+-+    "git-widget-placeholder": "#7 on suhrab",
+-     "kotlin-language-version-configured": "true",
+-     "last_opened_file_path": "/Users/oleksandrkravets/Desktop/OrangeHRMAutomation/OrangeHRMAutomation"
+-   }
+Index: src/test/resources/Features/Timesheets.feature
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>Feature: Timesheet Management\r\n\r\n  Background:\r\n    Given the user is logged into OrangeHRM with valid credentials\r\n    And the system is functional and accessible\r\n\r\n  # Timesheet Management Scenarios\r\n  Scenario: Verify employee timesheet submission\r\n    When the employee navigates to \"My Timesheets\"\r\n    And updates the timesheet hours\r\n    And submits the timesheet for approval\r\n    Then the timesheet should be submitted successfully\r\n    And the status should update to \"Pending Approval\"\r\n\r\n  Scenario: Verify manager approval of timesheets\r\n    When the manager navigates to \"Employee Timesheets\"\r\n    And opens a pending timesheet\r\n    And approves the timesheet\r\n    Then the timesheet status should update to \"Approved\"\r\n    And a notification should be sent to the employee\r\n\r\n  Scenario: Verify rejection of timesheets with comments\r\n    When the manager navigates to \"Employee Timesheets\"\r\n    And opens a pending timesheet\r\n    And rejects the timesheet with comments\r\n    Then the timesheet status should update to \"Rejected\"\r\n    And the comments should be sent to the employee\r\n\r\n  Scenario: Verify employee punch in/out functionality\r\n    When the employee navigates to \"Punch In/Out\"\r\n    And enters the punch-in/punch-out time\r\n    And clicks \"Save\"\r\n    Then the attendance record should be saved successfully\r\n\r\n  Scenario: Verify attendance records display\r\n    When the employee navigates to \"My Records\"\r\n    And selects a specific date range\r\n    Then the attendance records for the selected range should be displayed correctly\r\n\r\n  # Attendance Management Scenarios\r\n  Scenario: Verify manager view of attendance records\r\n    When the manager navigates to \"Employee Records\"\r\n    And searches for an employee\r\n    And selects a date range\r\n    Then the attendance records for the selected employee should be displayed correctly\r\n\r\n  Scenario: Verify attendance settings configuration\r\n    When the admin navigates to \"Configuration\"\r\n    And updates the attendance settings (e.g., punch-in policy)\r\n    And saves the changes\r\n    Then the attendance settings should be updated successfully\r\n\r\n  # Report Generation Scenarios\r\n  Scenario: Verify generation of project reports\r\n    When the manager navigates to \"Project Reports\"\r\n    And selects a specific project\r\n    And generates the report\r\n    Then the project report should be displayed correctly\r\n\r\n  Scenario: Verify generation of employee reports\r\n    When the manager navigates to \"Employee Reports\"\r\n    And selects an employee and a date range\r\n    And generates the report\r\n    Then the employee report should be displayed correctly\r\n\r\n  Scenario: Verify generation of attendance summaries\r\n    When the manager navigates to \"Attendance Summary\"\r\n    And selects appropriate filters\r\n    And generates the summary\r\n    Then the attendance summary should be displayed correctly\r\n\r\n  # Data Management Scenarios\r\n  Scenario: Verify customer record management\r\n    When the admin navigates to \"Customers\"\r\n    And adds or edits a customer record\r\n    And saves the changes\r\n    Then the customer record should be updated successfully\r\n\r\n  Scenario: Verify project record management\r\n    When the manager navigates to \"Projects\"\r\n    And adds or edits a project record\r\n    And saves the changes\r\n    Then the project record should be updated successfully\r\n\r\n  Scenario: Verify validation for empty fields\r\n    When the user navigates to \"My Timesheets\" or \"Employee Timesheets\"\r\n    And leaves required fields empty during submission or approval\r\n    Then a validation message should be displayed\r\n\r\n  # System Performance Scenarios\r\n  Scenario: Verify system performance with large datasets\r\n    Given the system contains 1000+ records\r\n    When the user navigates to \"Employee Timesheets\" or \"Reports\"\r\n    Then the system should handle large datasets without errors or delays\r\n\r\n  Scenario: Verify concurrent actions on timesheets\r\n    Given two users are logged into OrangeHRM with valid credentials\r\n    When both users attempt to approve or reject the same timesheet simultaneously\r\n    Then the system should handle concurrent actions without conflicts\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/resources/Features/Timesheets.feature b/src/test/resources/Features/Timesheets.feature
+--- a/src/test/resources/Features/Timesheets.feature	(revision c1080fa153fd50b41efd7b8533e4ffe56a4c8431)
++++ b/src/test/resources/Features/Timesheets.feature	(date 1734315188912)
+@@ -1,4 +1,4 @@
+-Feature: Timesheet Management
++Feature: Timesheet and Attendance Management
+ 
+   Background:
+     Given the user is logged into OrangeHRM with valid credentials
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"b6484e5f-fee6-4422-bde9-591361debe2f\" name=\"Changes\" comment=\"\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/test/resources/config/config.properties\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/misc.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/Utils/Constants.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/java/Utils/Constants.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 7\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2pfk1XseHB1uAweq6WBi1GkOYlv\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;#7 on suhrab&quot;,\r\n    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;/Users/oleksandrkravets/Desktop/OrangeHRMAutomation/OrangeHRMAutomation&quot;\r\n  }\r\n}</component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"b6484e5f-fee6-4422-bde9-591361debe2f\" name=\"Changes\" comment=\"\" />\r\n      <created>1733164302632</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1733164302632</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision c1080fa153fd50b41efd7b8533e4ffe56a4c8431)
++++ b/.idea/workspace.xml	(date 1734315279873)
+@@ -4,11 +4,11 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="b6484e5f-fee6-4422-bde9-591361debe2f" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/src/test/resources/config/config.properties" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++    <list default="true" id="b6484e5f-fee6-4422-bde9-591361debe2f" name="Changes" comment="config properties, constant and config reader files are being added">
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_5_2024_11_46_AM_[Changes]/shelved.patch" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_12_5_2024_11_46_AM__Changes_.xml" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/test/java/Utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utils/Constants.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/resources/Features/Timesheets.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Features/Timesheets.feature" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -17,6 +17,21 @@
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++  </component>
++  <component name="GitHubPullRequestSearchHistory">{
++  &quot;lastFilter&quot;: {
++    &quot;state&quot;: &quot;OPEN&quot;,
++    &quot;assignee&quot;: &quot;suaria&quot;
++  }
++}</component>
++  <component name="GithubPullRequestsUISettings">{
++  &quot;selectedUrlAndAccountId&quot;: {
++    &quot;url&quot;: &quot;https://github.com/automatewithamit/OrangeHRMAutomation.git&quot;,
++    &quot;accountId&quot;: &quot;a259dd49-4dbd-4c67-8af5-2faf042755df&quot;
++  }
++}</component>
++  <component name="ProblemsViewState">
++    <option name="selectedTabId" value="CurrentFile" />
+   </component>
+   <component name="ProjectColorInfo">{
+   &quot;associatedIndex&quot;: 7
+@@ -30,11 +45,16 @@
+   <component name="PropertiesComponent">{
+   &quot;keyToString&quot;: {
+     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;#7 on suhrab&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;suhrab&quot;,
+     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;/Users/oleksandrkravets/Desktop/OrangeHRMAutomation/OrangeHRMAutomation&quot;
++    &quot;last_opened_file_path&quot;: &quot;C:/Users/Balkh/Music/OrangeHRMAutomation/src/test/java/Utils&quot;
+   }
+ }</component>
++  <component name="RecentsManager">
++    <key name="CopyFile.RECENT_KEYS">
++      <recent name="C:\Users\Balkh\Music\OrangeHRMAutomation\src\test\java\Utils" />
++    </key>
++  </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+@@ -44,6 +64,35 @@
+       <option name="presentableId" value="Default" />
+       <updated>1733164302632</updated>
+     </task>
++    <task id="LOCAL-00001" summary="config properties, constant and config reader files are being added">
++      <option name="closed" value="true" />
++      <created>1733424298376</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1733424298376</updated>
++    </task>
++    <task id="LOCAL-00002" summary="config properties, constant and config reader files are being added">
++      <option name="closed" value="true" />
++      <created>1733424307453</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1733424307453</updated>
++    </task>
++    <task id="LOCAL-00003" summary="config properties, constant and config reader files are being added">
++      <option name="closed" value="true" />
++      <created>1733424410127</created>
++      <option name="number" value="00003" />
++      <option name="presentableId" value="LOCAL-00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1733424410127</updated>
++    </task>
++    <option name="localTasksCounter" value="4" />
+     <servers />
+   </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="config properties, constant and config reader files are being added" />
++    <option name="LAST_COMMIT_MESSAGE" value="config properties, constant and config reader files are being added" />
++  </component>
+ </project>
+\ No newline at end of file

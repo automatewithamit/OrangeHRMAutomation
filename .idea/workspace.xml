@@ -13,6 +13,9 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/framework/web_elements/WebLink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/framework/web_elements/WebLink.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Steps/PerformanceSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Steps/PerformanceSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/Features/Performance.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Features/Performance.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Runners/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Runners/TestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Steps/DirectorySteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Steps/DirectorySteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Directory.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Directory.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +56,8 @@
     "JUnit.PerformanceSteps.executor": "Run",
     "JUnit.PerformanceSteps.the_user_is_navigated_to_orangehrm_login_page.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TestNG.TestRunner.executor": "Run",
+    "git-widget-placeholder": "suhrab",
     "git-widget-placeholder": "Nikorey",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/oleksandrkravets/Desktop/OrangeHRMAutomation/OrangeHRMAutomation",
