@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 import static com.framework.core.BrowserManager.getDriver;
 
-public class RecruitmentPage {
+public class RecruitmentPage extends Header{
 
 
     // Method to click the Recruitment Menu

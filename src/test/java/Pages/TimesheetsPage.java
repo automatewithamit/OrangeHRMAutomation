@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 
-public class TimesheetsPage extends BasePage {
+public class TimesheetsPage extends Header {
 
     private WebDriver driver;
 
