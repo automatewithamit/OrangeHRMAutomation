@@ -33,7 +33,7 @@ Scenario: Apply a leave request and verify that the Admin cannot approve their o
   Given Admin has sufficient leave balance
   When admin clicks the Apply tab
   And admin selects a valid leave type "CAN-FMLA"
-  And admin enter a valid date range "Dec 30" to "Dec31"
+  And admin enter a valid date range "Jan 30" to "Jan 31"
   And admin clicks Apply button
   When admin navigates to the Leave List tab
   Then the leave request appears with the status of Pending Approval
@@ -45,7 +45,7 @@ Scenario: Add entitlement to multiple employees
   And admin select Add Entitlement from the dropdown
   And admin choose Multiple Employees
   And admin select a valid leave type "CAN Personal"
-  And admin select a valid leave period "1-1-2024 to 12-31-2024"
+  And admin select a valid leave period "1-1-2025 to 12-31-2025"
   And admin enter the number "15" of the entitlements
   And admin clicks Save button
   Then the addition confirmation page is available
@@ -64,7 +64,7 @@ Scenario: Generate reports based on leave type
   When admin clicks the Reports tab
   And admin select Leave Entitlements and Usage Reports from the dropdown
   And admin clicks leave type in Generate For
-  And admin selects the leave period "1-1-2024 - 12-31-2024"
+  And admin selects the leave period "1-1-2025 - 12-31-2025"
   And admin clicks on Generate button
   Then the report displayed the leave entitlements and usage report for the specified period
 

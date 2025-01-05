@@ -9,16 +9,14 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-
-
 import java.time.Duration;
 
 import static com.framework.core.BrowserManager.getDriver;
 
 public class LeaveAdminSteps{
 
-    WebDriver driver = getDriver();
-    LeaveManagementPage leaveManagementPage = new LeaveManagementPage(driver);
+  //  WebDriver driver = getDriver();
+    LeaveManagementPage leaveManagementPage = new LeaveManagementPage();
     //Background
     @Given("admin is on the OrangeHRM app")
     public void admin_is_on_the_orange_hrm_app () {
@@ -37,7 +35,6 @@ public class LeaveAdminSteps{
     public void admin_is_logged_into_the_application () {
         leaveManagementPage.validateDashBoard();
     }
-
 
     @Then("admin navigates to the Leave Module")
     public void admin_navigates_to_the_leave_module() {
@@ -70,6 +67,8 @@ public class LeaveAdminSteps{
     //TC10HK @LeaveAdm_10
     @Given("Admin has sufficient leave balance")
     public void admin_has_sufficient_leave_balance() {
+        leaveManagementPage.clickEntitlementsMenu();
+        leaveManagementPage.selectMyEntitlements();
         leaveManagementPage.validateAdmEntitlement();
     }
     @When("admin clicks the Apply tab")
@@ -82,13 +81,14 @@ public class LeaveAdminSteps{
         leaveManagementPage.selectCanFMLA();
     }
     @When("admin enter a valid date range {string} to {string}")
-    public void admin_enter_a_valid_date_range_to(String arg1, String arg2){
+    public void admin_enter_a_valid_date_range_to(String arg1, String arg2) {
         leaveManagementPage.enterStartDate();
         leaveManagementPage.enterEndDate();
     }
    @When("admin clicks Apply button")
     public void admin_clicks_apply_button() {
         leaveManagementPage.clickApplyBtn();
+
     }
 
     @When("admin navigates to the Leave List tab")
