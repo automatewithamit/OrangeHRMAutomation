@@ -15,10 +15,10 @@ import org.testng.annotations.DataProvider;
         },
         monochrome = true,                        // Makes console output readable
         dryRun = false ,                          // Checks mapping between feature files and step definitions
-        tags = "@SearchCandidates"                       // Run scenarios tagged with @SmokeTest
+        tags = "@TC01"                  // Run scenarios tagged with @SmokeTest
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
-
+//gjkhl/;
     // Parallel execution support
     @Override
     @DataProvider(parallel = true)
