@@ -11,11 +11,7 @@ public class DirectorySteps {
 
     }
 
-    // Scenario: Verify the Directory page loads correctly
-    @When("the user navigates to the Directory module")
-    public void the_user_navigates_to_the_Directory_module() {
-        //
-    }
+
 
     @Then("the Directory page should load successfully with a header \"Directory\" and a list of employee records")
     public void the_directory_page_should_load_successfully() {
@@ -62,15 +58,9 @@ public class DirectorySteps {
 
     @Then("the system should display a message indicating \"No records found\"")
     public void the_system_should_display_no_records_found() {
-
-
-    // Scenario: Verify search by job title
-    @Given("employees have valid job titles assigned")
-    public void employees_have_valid_job_titles_assigned() {
-        //
-        }
-
     }
+
+
 
     @When("the user selects a job title from the filter and clicks \"Search\"")
     public void the_user_selects_a_job_title_and_searches() {
