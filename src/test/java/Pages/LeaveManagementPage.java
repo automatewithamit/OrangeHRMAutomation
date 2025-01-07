@@ -1,6 +1,8 @@
 package Pages;
 
 import Utils.ConfigReader;
+import com.framework.web_elements.Button;
+import com.framework.web_elements.TextBox;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -12,25 +14,20 @@ import static com.framework.core.BrowserManager.getDriver;
 
 public class LeaveManagementPage extends Header{
 
+    Button loginButton = new Button(By.xpath("//button[@type='submit']"));
+    Button approvedButton = new Button(By.xpath("(//button[@class='oxd-button oxd-button--medium oxd-button--label-success oxd-table-cell-action-space'])"));
+    TextBox userNameTextBox = new TextBox(By.xpath("//input[@placeholder='Username']"));
+    TextBox passwordTextBox = new TextBox(By.xpath("//input[@placeholder='Password']"));
 
-    // Constructor to initialize WebDriver
-    public LeaveManagementPage() {
-//this.driver=driver;
-    }
-
-//Background
     public void enterCredentials()
     {
-        WebElement userName = getDriver().findElement(By.xpath("//input[@placeholder='Username']"));
-        userName.sendKeys(ConfigReader.read("userName"));
-        WebElement password = getDriver().findElement(By.xpath("//input[@placeholder='Password']"));
-        password.sendKeys(ConfigReader.read("password"));
+        userNameTextBox.setText(ConfigReader.read("userName"));
+        passwordTextBox.setText(ConfigReader.read("password"));
     }
 
     public void clickLogin()
     {
-        WebElement loginBtn = getDriver().findElement(By.xpath("//button[@type='submit']"));
-        loginBtn.click();
+        loginButton.click();
     }
 
     public void validateDashBoard()
@@ -44,7 +41,7 @@ public class LeaveManagementPage extends Header{
         WebElement status = getDriver().findElement(By.xpath("(//div[@class='oxd-table-cell oxd-padding-cell'])[7]"));
         Assert.assertTrue(status.isDisplayed());
     }
-//div[contains(text(),'Pending')][1]
+
     public void clickLeaveList()
     {
         WebElement leaveList = getDriver().findElement(By.xpath("(//a[@class='oxd-topbar-body-nav-tab-item'])[3]"));
@@ -55,12 +52,11 @@ public class LeaveManagementPage extends Header{
     {
         WebElement approved = getDriver().findElement(By.xpath("(//button[@class='oxd-button oxd-button--medium oxd-button--label-success oxd-table-cell-action-space'])"));
         Assert.assertTrue(approved.isDisplayed());
-    }//button[text()=' Approve ']
+    }
 
     public void clickApprovedBtn()
     {
-        WebElement approved = getDriver().findElement(By.xpath("(//button[@class='oxd-button oxd-button--medium oxd-button--label-success oxd-table-cell-action-space'])"));
-        approved.click();
+        approvedButton.click();
     }
     //button[text()=' Approve ']
     public void leaveStatus()

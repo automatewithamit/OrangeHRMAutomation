@@ -5,6 +5,7 @@ import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import com.framework.reporting.Reporter;
+import io.cucumber.java.sl.In;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
@@ -118,10 +119,6 @@ public final class ElementUtil {
 
     }
 
-    // 3. Click using Actions class
-    public static void clickUsingMouse(By locator) {
-
-    }
 
     public static void doubleClick(By locator) {
 

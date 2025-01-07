@@ -14,11 +14,11 @@ import org.testng.annotations.DataProvider;
                 "junit:target/cucumber-reports/Cucumber.xml"  // JUnit report
         },
         monochrome = true,                        // Makes console output readable
-        dryRun = false ,                          // Checks mapping between feature files and step definitions
-        tags = "@LeaveAdm_14"                       // Run scenarios tagged with @SmokeTest
+        dryRun = false                          // Checks mapping between feature files and step definitions
+                               // Run scenarios tagged with @SmokeTest
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
-//gjkhl/;
+
     // Parallel execution support
     @Override
     @DataProvider(parallel = true)
