@@ -1,279 +1,274 @@
 package Pages;
 
 import Utils.ConfigReader;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import java.time.Duration;
 
-import java.util.List;
+import static com.framework.core.BrowserManager.getDriver;
+
 
 public class LeaveManagementPage extends Header{
-
-    public WebDriver driver;
 
 
     // Constructor to initialize WebDriver
     public LeaveManagementPage() {
-
+//this.driver=driver;
     }
 
-    public void enterCredential(String username, String pass)
+//Background
+    public void enterCredentials()
     {
-
-        WebElement userName = driver.findElement(By.xpath("//input[@name='username']"));
-        userName.sendKeys(username);
-        WebElement password = driver.findElement(By.xpath("//input[@name='password']"));
-        password.sendKeys(pass);
+        WebElement userName = getDriver().findElement(By.xpath("//input[@placeholder='Username']"));
+        userName.sendKeys(ConfigReader.read("userName"));
+        WebElement password = getDriver().findElement(By.xpath("//input[@placeholder='Password']"));
+        password.sendKeys(ConfigReader.read("password"));
     }
 
     public void clickLogin()
     {
-        WebElement loginBtn = driver.findElement(By.xpath("//button[@type='submit']"));
+        WebElement loginBtn = getDriver().findElement(By.xpath("//button[@type='submit']"));
         loginBtn.click();
     }
 
     public void validateDashBoard()
     {
-        WebElement dashboard = driver.findElement(By.xpath("//h6[text()='Dashboard']"));
+        WebElement dashboard = getDriver().findElement(By.xpath("//h6[@class='oxd-text oxd-text--h6 oxd-topbar-header-breadcrumb-module']"));
         Assert.assertTrue(dashboard.isDisplayed());
     }
 
     public void validateStatus()
     {
-        WebElement status = driver.findElement(By.xpath("//div[contains(text(),'Pending')][1]"));
+        WebElement status = getDriver().findElement(By.xpath("(//div[@class='oxd-table-cell oxd-padding-cell'])[7]"));
         Assert.assertTrue(status.isDisplayed());
+    }
+//div[contains(text(),'Pending')][1]
+    public void clickLeaveList()
+    {
+        WebElement leaveList = getDriver().findElement(By.xpath("(//a[@class='oxd-topbar-body-nav-tab-item'])[3]"));
+        leaveList.click();
     }
 
     public void locateApprovedStatus()
     {
-        WebElement approved = driver.findElement(By.xpath("//button[text()=' Approve ']"));
+        WebElement approved = getDriver().findElement(By.xpath("(//button[@class='oxd-button oxd-button--medium oxd-button--label-success oxd-table-cell-action-space'])"));
         Assert.assertTrue(approved.isDisplayed());
-    }
+    }//button[text()=' Approve ']
 
     public void clickApprovedBtn()
     {
-        WebElement approved = driver.findElement(By.xpath("//button[text()=' Approve ']"));
+        WebElement approved = getDriver().findElement(By.xpath("(//button[@class='oxd-button oxd-button--medium oxd-button--label-success oxd-table-cell-action-space'])"));
         approved.click();
     }
-
-    // Method to click the Leave Menu
-    public void clickLeaveMenu() {
-        WebElement leaveMenu = driver.findElement(By.cssSelector("a[href='/web/index.php/leave/viewLeaveModule']"));
-        leaveMenu.click();
-    }
-
-    // Method to click the Apply Menu
-    public void clickApplyMenu() {
-        WebElement applyMenu = driver.findElement(By.xpath("//a[text()='Apply']"));
-        applyMenu.click();
-    }
-
-    // Method to click My Leave Menu
-    public void clickMyLeaveMenu() {
-        WebElement myLeaveMenu = driver.findElement(By.xpath("//a[text()='My Leave']"));
-        myLeaveMenu.click();
-    }
-
-    // Method to click Entitlements Menu
-    public void clickEntitlementsMenu() {
-        WebElement entitlementsMenu = driver.findElement(By.xpath("//span[text()='Entitlements ']"));
-        entitlementsMenu.click();
-    }
-
-    public void selectAddEntitlements()
-    {
-        WebElement addEntitlements = driver.findElement(By.xpath("//a[text()='Add Entitlements']"));
-        addEntitlements.click();
-    }
-
-    public void selectMultipleEmployee()
-    {
-        WebElement multipleEmp = driver.findElement(By.xpath("//label[text()='Multiple Employees']"));
-        multipleEmp.click();
-    }
-
-    public void selectLeaveType()
-    {
-        WebElement leaveType = driver.findElement(By.xpath("//div[3]//div[1]//div[1]//div[1]//div[2]//div[1]//div[1]//div[2]//i[1]"));
-        leaveType.click();
-    }
-
-    public void selectCANPersonal()
-    {
-        WebElement canPersonal = driver.findElement(By.xpath("//div[text()='CAN - Personal']"));
-        canPersonal.click();
-    }
-
-    public void inputEntitlements()
-    {
-        WebElement inpEntitlement = driver.findElement(By.xpath("//div[@class='oxd-input-group oxd-input-field-bottom-space']//div//input[@class='oxd-input oxd-input--active']"));
-        inpEntitlement.sendKeys("15");
-    }
-
-    public void clickSaveBtn()
-    {
-        WebElement saveBtn = driver.findElement(By.xpath("//button[text()=' Save ']"));
-        saveBtn.click();
-    }
-
-    public void validateUpdateEntitlement()
-    {
-        WebElement popUpEnt = driver.findElement(By.xpath("Updating Entitlement - Matching Employees"));
-        String actual = popUpEnt.getText();
-        String expected = "Updating Entitlement - Matching Employees";
-        Assert.assertEquals(actual,expected);
-    }
-
-    public void validateCancelConfirmBtn()
-    {
-        WebElement confirmBtn = driver.findElement(By.xpath("//button[text()=' Confirm ']"));
-        Assert.assertTrue(confirmBtn.isDisplayed());
-    }
-
-    // Method to click Reports Menu
-    public void clickReportsMenu() {
-        WebElement reportsMenu = driver.findElement(By.xpath("//span[text()='Reports ']"));
-        reportsMenu.click();
-    }
-
-    public void selectLeaveEntAndUsgReport()
-    {
-        WebElement leaveEntitlementAndUsageReport = driver.findElement(By.xpath("//a[text()='Leave Entitlements and Usage Report']"));
-        leaveEntitlementAndUsageReport.click();
-    }
-
-    public void clickLeaveType()
-    {
-        WebElement leaveTypeRBtn = driver.findElement(By.xpath("//label[contains(text(),'Leave Type')]"));
-        leaveTypeRBtn.click();
-    }
-
-    public void selectLeavePeriod()
-    {
-        WebElement theLeavePeriod = driver.findElement(By.xpath("//div[contains(text(),'2024-01-01 - 2024-31-12')]"));
-        theLeavePeriod.click();
-    }
-
-    public void clickGenerateButton()
-    {
-        WebElement generateBtn = driver.findElement(By.xpath("//button[@type='submit']"));
-        generateBtn.click();
-    }
-
-    public void validateReport()
-    {
-        WebElement validateReports = driver.findElement(By.xpath("//span[@class='oxd-text oxd-text--span oxd-text--count']"));
-        Assert.assertTrue(validateReports.isDisplayed());
-    }
-    public void clickLeaveList()
-    {
-        WebElement leaveList = driver.findElement(By.xpath("//a[text()='Leave List']"));
-        leaveList.click();
-    }
-
-
+    //button[text()=' Approve ']
     public void leaveStatus()
     {
-        WebElement leaveStatus = driver.findElement(By.xpath("(//div[@class='oxd-select-text-input'][normalize-space()='-- Select --'])[1]"));
-        leaveStatus.click();
-        WebElement scheduled = driver.findElement(By.xpath("//body/div[@id='app']/div[@class='oxd-layout orangehrm-upgrade-layout']/div[@class='oxd-layout-container']/div[@class='oxd-layout-context']/div[@class='orangehrm-background-container']/div[@class='oxd-table-filter']/div[@class='oxd-table-filter-area']/form[@class='oxd-form']/div[2]/div[1]/div[1]"));
-        scheduled.click();
-        WebElement search = driver.findElement(By.xpath("//button[@type='submit']"));
-        search.click();
+        WebElement scheduled = getDriver().findElement(By.xpath("//body/div[@id='app']/div[@class='oxd-layout orangehrm-upgrade-layout']/div[@class='oxd-layout-container']/div[@class='oxd-layout-context']/div[@class='orangehrm-background-container']/div[@class='oxd-table-filter']/div[@class='oxd-table-filter-area']/form[@class='oxd-form']/div[2]/div[1]/div[1]"));
+        Assert.assertTrue(scheduled.isDisplayed());
     }
 
     public void validateAdmEntitlement()
     {
-        WebElement admEnt = driver.findElement(By.xpath("//span[text()='Total 23.00 Day(s)']"));
+        WebElement leaveType= getDriver().findElement(By.xpath("(//i[@class='oxd-icon bi-caret-down-fill oxd-select-text--arrow'])[1]"));
+        leaveType.click();
+        WebElement canFMLA= getDriver().findElement(By.xpath("(//div[@class='oxd-select-option'])[2]"));
+        canFMLA.click();
+        WebElement searchRBtn= getDriver().findElement(By.xpath("//button[@class='oxd-button oxd-button--medium oxd-button--secondary orangehrm-left-space']"));
+        searchRBtn.click();
+        WebElement admEnt = getDriver().findElement(By.xpath("//div[@class='oxd-table-cell oxd-padding-cell'][6]"));
         Assert.assertTrue(admEnt.isDisplayed());
     }
+    // Method to click the Apply Menu
+    public void clickApplyMenu() {
+        WebElement applyMenu = getDriver().findElement(By.xpath("(//a[@class='oxd-topbar-body-nav-tab-item'])[1]"));
+        applyMenu.click();
+    }////a[text()='Apply']
 
     public void applyLeaveType()
     {
-        WebElement applyLeaveTypeAdm = driver.findElement(By.xpath("//div[text()='-- Select --']"));
+        WebElement applyLeaveTypeAdm = getDriver().findElement(By.xpath("//div[@class='oxd-select-text-input']"));
         applyLeaveTypeAdm.click();
-    }
+    }////div[text()='-- Select --']
 
     public void selectCanFMLA()
     {
-        WebElement canFMLA = driver.findElement(By.xpath("//div[text()='CAN - FMLA']"));
+        WebElement canFMLA = getDriver().findElement(By.xpath("//span[text()='CAN - FMLA']"));
         canFMLA.click();
-
     }
 
     public void enterStartDate()
     {
-        WebElement fromDate = driver.findElement(By.xpath("//div[@class='oxd-grid-4 orangehrm-full-width-grid']//div[1]//div[1]//div[2]//div[1]//div[1]//i[1]"));
+        WebElement fromDate = getDriver().findElement(By.xpath("(//input[@class='oxd-input oxd-input--active'])[2]"));
         fromDate.click();
-        WebElement startDate = driver.findElement(By.xpath("//div[@class='oxd-calendar-date'][normalize-space()='30']"));
-        startDate.click();
 
+        WebElement startDate = getDriver().findElement(By.xpath("//div[@class='oxd-calendar-date' and text()='30']"));
+        startDate.click();
     }
 
-    public void enterEndDate()
-    {
-        WebElement toDate = driver.findElement(By.xpath("//body/div[@id='app']/div[@class='oxd-layout orangehrm-upgrade-layout']/div[@class='oxd-layout-container']/div[@class='oxd-layout-context']/div[@class='orangehrm-background-container']/div[@class='orangehrm-card-container']/form[@class='oxd-form']/div[@class='oxd-form-row']/div[@class='oxd-grid-4 orangehrm-full-width-grid']/div[2]/div[1]/div[2]/div[1]/div[1]/i[1]"));
+    public void enterEndDate(){
+        WebElement toDate= getDriver().findElement(By.xpath("(//i[@class='oxd-icon bi-calendar oxd-date-input-icon'])[2]"));
         toDate.click();
-        WebElement endDate = driver.findElement(By.xpath("//div[contains(text(),'31')]"));
+
+        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
+        WebElement endDate = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//div[@class='oxd-calendar-date' and text()='31']")));
         endDate.click();
+
     }
 
     public void clickApplyBtn()
     {
-        WebElement applyBtn = driver.findElement(By.xpath("//button[text()=' Apply ']"));
+        WebElement applyBtn = getDriver().findElement(By.xpath("//button[@class='oxd-button oxd-button--medium oxd-button--secondary orangehrm-left-space']"));
         applyBtn.click();
-    }
+    }////button[text()=' Apply ']
 
     public void validateAdmApply()
     {
-        WebElement pendingApproval = driver.findElement(By.xpath("//div[text()='Pending Approval (2.00)']"));
+        WebElement pendingApproval = getDriver().findElement(By.xpath("//div[text()='Pending Approval (2.00)']"));
         Assert.assertTrue(pendingApproval.isDisplayed());
     }
 
     public void validateNoAction()
     {
-        WebElement actionBtnNoMessage = driver.findElement(By.xpath("//div[@class='oxd-table-cell-actions']"));
+        WebElement actionBtnNoMessage = getDriver().findElement(By.xpath("//div[@class='oxd-table-cell-actions']"));
         Assert.assertTrue(actionBtnNoMessage.isDisplayed());
+    }
+
+    // Method to click Entitlements Menu
+    public void clickEntitlementsMenu() {
+        WebElement entitlementsMenu = getDriver().findElement(By.xpath("(//span[@class='oxd-topbar-body-nav-tab-item'])[1]"));
+        entitlementsMenu.click();
+    }////span[text()='Entitlements ']
+
+    public void selectAddEntitlements()
+    {
+        WebElement addEntitlements = getDriver().findElement(By.xpath("(//a[@class='oxd-topbar-body-nav-tab-link'])[1]"));
+        addEntitlements.click();
+    }////a[text()='Add Entitlements']
+
+    public void selectMyEntitlements()
+    {
+        WebElement myEntitlements = getDriver().findElement(By.xpath("//a[@role='menuitem' and text()='My Entitlements']"));
+        myEntitlements.click();
+    }
+    public void selectMultipleEmployee()
+    {
+        WebElement multipleEmp = getDriver().findElement(By.xpath("(//span[@class='oxd-radio-input oxd-radio-input--active --label-right oxd-radio-input'])[2]"));
+        multipleEmp.click();
+    }////label[text()='Multiple Employees']
+
+    public void selectLeaveType()
+    {
+        WebElement leaveType = getDriver().findElement(By.xpath("//div[3]//div[1]//div[1]//div[1]//div[2]//div[1]//div[1]//div[2]//i[1]"));
+        leaveType.click();
+    }
+
+    public void selectCANPersonal()
+    {
+        WebElement canPersonal = getDriver().findElement(By.xpath("//span[text()='CAN - Personal']"));
+        canPersonal.click();
+    }
+
+    public void selectLeavePeriod()
+    {
+        WebElement theLeavePeriod = getDriver().findElement(By.xpath("(//div[@class='oxd-select-text-input'])[2]"));
+        theLeavePeriod.click();
+    }
+
+    public void inputEntitlements()
+    {
+        WebElement inpEntitlement = getDriver().findElement(By.xpath("//div[@class='oxd-input-group oxd-input-field-bottom-space']//div//input[@class='oxd-input oxd-input--active']"));
+        inpEntitlement.sendKeys("15");
+    }
+
+    public void clickSaveBtn()
+    {
+        WebElement saveBtn = getDriver().findElement(By.xpath("//button[@class='oxd-button oxd-button--medium oxd-button--secondary orangehrm-left-space']"));
+        saveBtn.click();
+    }////button[text()=' Save ']
+
+    public void validateUpdateEntitlement()
+    {
+       WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
+        WebElement popUpHeader = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//div[@class='oxd-sheet oxd-sheet--rounded oxd-sheet--white oxd-dialog-sheet oxd-dialog-sheet--shadow orangehrm-dialog-modal']")));
+        Assert.assertTrue(popUpHeader.isDisplayed());
     }
 
     public void clickConfigureMenu()
     {
-        WebElement configureMenu = driver.findElement(By.xpath("//span[text()='Configure ']"));
+        WebElement configureMenu = getDriver().findElement(By.xpath("(//span[@class='oxd-topbar-body-nav-tab-item'])[3]"));
         configureMenu.click();
-    }
+    }////span[text()='Configure ']
 
     public void selectLeaveTypeConfi()
     {
-        WebElement leaveTypeConfi = driver.findElement(By.xpath("//a[text()='Leave Types']"));
+        WebElement leaveTypeConfi = getDriver().findElement(By.xpath("(//a[@class='oxd-topbar-body-nav-tab-link'])[2]"));
         leaveTypeConfi.click();
-    }
+    }////a[text()='Leave Types']
 
     public void clickAddBtn()
     {
-        WebElement addBtn = driver.findElement(By.xpath("//button[text()=' Add ']"));
+        WebElement addBtn = getDriver().findElement(By.xpath("//button[@class='oxd-button oxd-button--medium oxd-button--secondary']"));
         addBtn.click();
-    }
+    }////button[text()=' Add ']
 
-    public void addLeaveType()
-    {
-        WebElement newLeaveType = driver.findElement(By.xpath("//div[@class='oxd-input-group oxd-input-field-bottom-space']//input[@class='oxd-input oxd-input--active']"));
-        newLeaveType.sendKeys("Jury Duty");
+    public void addLeaveType(){
+        WebElement newLeaveType = getDriver().findElement(By.xpath("//div[@class='oxd-input-group oxd-input-field-bottom-space']//input[@class='oxd-input oxd-input--active']"));
+        newLeaveType.clear();
+        newLeaveType.sendKeys("Jury - Duty");
     }
 
     public void clickSaveBtnConfi()
     {
-        WebElement saveBtnConfi = driver.findElement(By.xpath("//button[@type='submit']"));
+        WebElement saveBtnConfi = getDriver().findElement(By.xpath("//button[@type='submit']"));
         saveBtnConfi.click();
     }
 
-    public void validateNewLeaveType()
-    {
-        WebElement juryDutyType = driver.findElement(By.xpath("//div[(text()='Jury Duty')]"));
+    public void validateNewLeaveType() {
+        WebElement juryDutyType = getDriver().findElement(By.xpath("//div[(text()='Jury - Duty')]"));
         Assert.assertTrue(juryDutyType.isDisplayed());
     }
+
+    // Method to click Reports Menu
+    public void clickReportsMenu() {
+        WebElement reportsMenu = getDriver().findElement(By.xpath("(//span[@class='oxd-topbar-body-nav-tab-item'])[2]"));
+        reportsMenu.click();
+    }////span[text()='Reports ']
+
+    public void selectLeaveEntAndUsgReport()
+    {
+        WebElement leaveEntitlementAndUsageReport = getDriver().findElement(By.xpath("(//a[@class='oxd-topbar-body-nav-tab-link'])[1]"));
+        leaveEntitlementAndUsageReport.click();
+    }////a[text()='Leave Entitlements and Usage Report']
+
+    public void clickLeaveType()
+    {
+        WebElement leaveTypeRBtn = getDriver().findElement(By.xpath("(//label[@class='oxd-label'])[2]"));
+        leaveTypeRBtn.click();
+    }////label[contains(text(),'Leave Type')]
+
+    public void clickGenerateButton()
+    {
+        WebElement generateBtn = getDriver().findElement(By.xpath("//button[@type='submit']"));
+        generateBtn.click();
+    }
+
+    public void validateReport()
+    {
+        WebElement validateReports = getDriver().findElement(By.xpath("//span[@class='oxd-text oxd-text--span oxd-text--count']"));
+        Assert.assertTrue(validateReports.isDisplayed());
+    }
+
+
+    // Method to click My Leave Menu
+    public void clickMyLeaveMenu() {
+        WebElement myLeaveMenu = getDriver().findElement(By.xpath("(//a[@class='oxd-topbar-body-nav-tab-item'])[2]"));
+        myLeaveMenu.click();
+    }////a[text()='My Leave']
+
 
 }
 

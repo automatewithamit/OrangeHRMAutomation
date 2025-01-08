@@ -20,7 +20,7 @@ public class Hooks {
         String dir = System.getProperty("user.dir");
         String reportName = dir+"/Reports/Report_" + timestamp;
         System.out.println("Report Name : "+ reportName);
-        ExtentHelper.createExtentReports(dir+"/Reports","Report_"+timestamp);
+        //ExtentHelper.createExtentReports(dir+"/Reports","Report_"+timestamp);
 
     }
     @Before
