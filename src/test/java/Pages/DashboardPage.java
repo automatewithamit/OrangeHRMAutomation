@@ -65,22 +65,89 @@ public class DashboardPage extends Header {
         System.out.println("All widgets are visible on the dashboard.");
     }
 
-    public void isNavigationalPanelExpanded() {
+    public void navigationalPanelExpanded() {
         WebElement panel = getDriver().findElement(By.xpath("//div[@class='oxd-sidepanel-body']"));
         Assert.assertTrue(panel.isDisplayed());
     }
 
-    public void isPanelButtonClickable() {
-        WebElement buttonIcon = getDriver().findElement(By.xpath("//button[@class='oxd-icon-button oxd-main-menu-button']"));
-        Assert.assertTrue(buttonIcon.isEnabled());
+    public void toggleNavigationPanel() {
+        WebElement toggleButton = getDriver().findElement(By.xpath("//*[@id='app']/div[1]/div[1]/aside/nav/div[2]/div/div/button"));
+        toggleButton.click();
+
+        System.out.println("Navigational panel toggled.");
     }
 
-    public void isNavigationalPanelCollapsable() {
+    public void navigationalPanelCollapsable() {
+        WebElement navPanel = getDriver().findElement(By.xpath("//div[contains(@class, 'oxd-sidepanel')]"));
+
+        String panelClass = navPanel.getAttribute("class");
+        if (panelClass.contains("oxd-sidepanel--expanded")) {
+            System.out.println("The navigational panel is expanded.");
+        } else if (panelClass.contains("oxd-sidepanel--collapsed")) {
+            System.out.println("The navigational panel is collapsed.");
+        } else {
+            System.out.println("The navigational panel state is unknown.");
+        }
     }
 
-    public void isButtonVisible() {
+    public void toggleButtonVisible() {
+        WebElement toggleBtn = getDriver().findElement(By.xpath("//*[@id='app']/div[1]/div[1]/aside/nav/div[2]/div/div/button"));
+        if (toggleBtn.isDisplayed()) {
+            System.out.println("The toggle button is visible.");
+        } else {
+            throw new AssertionError("The toggle button is not visible.");
+        }
+    }
+
+    public void viewDashOnMobile() {
+        WebElement viewDash = getDriver().findElement(By.xpath("//*[@id='app']/div[1]/div[2]"));
+        if (viewDash.isDisplayed()) {
+            System.out.println("The dashboard is visible in mobile view.");
+        } else {
+            throw new AssertionError("The dashboard is not visible in mobile view.");
+        }
+    }
+
+    public void widgetsFitScreen() {
+        List<WebElement> widgets = getDriver().findElements(By.xpath("//*[@id='app']/div[1]/div[2]/div[2]"));
+        if (widgets.isEmpty()) {
+            throw new AssertionError("No widgets are visible in mobile view.");
+        }
+
+        System.out.println("Widgets visible in mobile view:");
+        for (WebElement widget : widgets) {
+            System.out.println(widget.getText());
+
+
+        }
+
+    }
+
+    public void navMenuVisible() {
+        WebElement navMenu = getDriver().findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[1]/aside/nav/div[2]/ul"));
+        if (navMenu.isDisplayed()) {
+            System.out.println("The navigation menu is visible.");
+        } else {
+            throw new AssertionError("The navigation menu is not visible.");
+        }
+    }
+
+    public void displayUserProfilePic() {
+        WebElement profilePic = getDriver().findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[1]/header/div[1]/div[3]/ul/li/span/img"));
+        Assert.assertTrue(profilePic.isDisplayed());
+    }
+
+    public void displayUserName() {
+        WebElement displayName = getDriver().findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[1]/header/div[1]/div[3]/ul/li/span/p"));
+        Assert.assertTrue(displayName.isDisplayed());
     }
 }
+
+
+
+
+
+
 
 
     //public void isNavigationMenuFunctional() {

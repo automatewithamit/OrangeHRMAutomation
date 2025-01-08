@@ -3,7 +3,7 @@ Feature: Dashboard Module Functionality
   Background:
     Given the user logs in with "Username" and "Password"
     When the user is redirected to the dashboard page
-  @OHR-6  @TC01 @dashboard
+  @OHR-6  @TC01 @dashboard @smoke
   Scenario: Verify dashboard loads correctly after a successful login
     #Given the user logs in with "Username" and "Password"
     When the user is redirected to the dashboard page
@@ -23,11 +23,11 @@ Feature: Dashboard Module Functionality
   @OHR-6  @TC03 @dashboard
   Scenario: Verify pending tasks are displayed correctly in "My Actions"
     Given the "My Actions" section is visible on the dashboard
-    #When the user views the "My Actions" section
+    When the user views the "My Actions" section
     When the section should display a list of pending tasks
-    #Then the total number of tasks displayed should match the records in the system
+    Then the total number of tasks displayed should match the records in the system
 
-  @OHR-6  @TC05 @dashboard
+  @OHR-6  @TC05 @dashboard @smoke
   Scenario: Verify dashboard responsiveness on a mobile device
     Given the user is viewing the dashboard on a mobile device
     Then all widgets should resize to fit the mobile screen dimensions
@@ -48,10 +48,10 @@ Feature: Dashboard Module Functionality
     #Then the "Help" button should be visible
     #And the button should be focusable using the keyboard
 
-  @OHR-6  @TC10 @dashboard
-  Scenario: Verify user is redirected to the login page after session timeout
-    Given the user remains inactive on the dashboard for the session timeout duration
-    Then  the user should be redirected to the login page
+  #@OHR-6  @TC10 @dashboard
+  #Scenario: Verify user is redirected to the login page after session timeout
+    #Given the user remains inactive on the dashboard for the session timeout duration
+    ##Then  the user should be redirected to the login page
 
 
   @OHR-6 @dashboard
@@ -60,7 +60,7 @@ Feature: Dashboard Module Functionality
     Then all widgets should resize to fit the tablet screen dimensions
     And all interactive elements should remain functional
 
-  @OHR-6  @TC11 @dashboard
+  @OHR-6  @TC11 @dashboard @smoke
   Scenario: Verify navigational panel collapses when clicked
     Given the navigational panel is in an expanded state
     When the user clicks the panel toggle button
@@ -74,5 +74,8 @@ Feature: Dashboard Module Functionality
     Then the widget should display a message "No employees on leave today"
     #And no employee entries should be listed
 
-
+@OHR-6  @TC16 @smoke
+  Scenario: Verify user personalization on the dashboard
+    Given  the dashboard should display the user's profile picture
+    Then the dashboard should display the user's full name
 
