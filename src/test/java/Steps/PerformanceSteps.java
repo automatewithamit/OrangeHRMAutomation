@@ -1,6 +1,9 @@
 package Steps;
 
+import Pages.PerformancePage;
 import Utils.CommonMethods;
+import Utils.ConfigReader;
+import com.framework.web_elements.DropDown;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.By;
 
@@ -10,38 +13,50 @@ import static com.framework.core.BrowserManager.getDriver;
 
 public class PerformanceSteps extends CommonMethods {
 
+    PerformancePage performancePage = new PerformancePage();
 
     //BACKGROUND STEPS
     @Given("the user is navigated to OrangeHRM login page")
     public void the_user_is_navigated_to_orangehrm_login_page() {
-        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        getDriver().manage().window().maximize();
-        getDriver().get("url");
+       getDriver().navigate().to(ConfigReader.read("url"));
     }
 
     @When("the user enters username value and password value")
     public void the_user_enters_username_and_password() {
-        getDriver().findElement(By.xpath("//input[@name='username']")).sendKeys("userName");
-        getDriver().findElement(By.xpath("//input[@name='password']")).sendKeys("password");
+        performancePage.enterLoginPassword();
     }
 
     @And("the user clicks the login button")
     public void the_user_clicks_the_login_button() {
-        getDriver().findElement(By.xpath("//button[text()=' Login ']")).click();
+        performancePage.clickLoginButton();
     }
 
     @And("the user is successfully logged in")
     public void the_user_is_successfully_logged_in() {
-        // Verify user is logged in
-        //Assert.assertTrue();
+        performancePage.dashboardValidation();
     }
 
     @Then("the user clicks Performance in navigation panel")
     public void the_user_clicks_performance_in_navigation_panel() {
-        // Click on the Performance navigation panel
-        System.out.println("Clicking on the Performance navigation panel...");
-        // Add logic to locate and click the Performance navigation item
+        performancePage.clickPerformanceMenu();
     }
 
     //*****************************************************************************************
+
+    //TC-01
+    @When("the user clicks Manage Reviews")
+    public void the_user_clicks_manage_reviews() {
+       performancePage.clickManageReviewsMenu();
+    }
+
+    @When("the user clicks My Reviews from dropdown")
+    public void the_user_clicks_my_reviews_from_dropdown() {
+        performancePage.setManageReviewsDB("My Reviews");
+    }
+
+    @Then("user can successfully view My Reviews")
+    public void user_can_successfully_view_my_reviews() {
+     performancePage.myReviewsValidation();
+    }
+
 }
