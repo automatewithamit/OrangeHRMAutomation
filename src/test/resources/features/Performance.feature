@@ -25,7 +25,7 @@ Feature: Performance Module functionality
   Scenario: Verify management can add KPI’s
     When the user clicks on Configure
     And the user clicks on KPIs from the dropdown
-    And the user clicks the Add button under Key Perfromance Indicators for Job Title
+    And the user clicks the Add button under Key Performance Indicators for Job Title
     When the user enters Key Performance Indicator Title
     And the user selects Job Title from the dropdown
     And the user clicks the Save button under Add Key Performance Indicator
