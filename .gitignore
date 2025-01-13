@@ -36,3 +36,4 @@ build/
 
 ### Mac OS ###
 .DS_Store
+/Users/amittripathi/IdeaProjects/OrangeHRMAutomation/Reports/*.html
