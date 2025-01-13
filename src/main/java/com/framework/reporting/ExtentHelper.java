@@ -17,7 +17,7 @@ public class ExtentHelper {
 
     public synchronized static ExtentReports createExtentReports(String reportPath, String reportName) {
 
-        ExtentSparkReporter reporter = new ExtentSparkReporter(projectDir+ reportPath + "\\" + reportName);
+        ExtentSparkReporter reporter = new ExtentSparkReporter(projectDir+ reportPath + reportName);
         try {
             System.out.println(projectDir + "/src/test/resources/config//");
             reporter.loadXMLConfig(new File(projectDir + "/src/test/resources/config/spark-config.xml"));

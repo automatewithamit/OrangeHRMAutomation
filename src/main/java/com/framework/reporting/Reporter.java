@@ -89,7 +89,7 @@ public class Reporter implements  ITestListener {
 //        ExtentHelper.getTest().log(Status.INFO, message);
 //        extentScreenShot();
 //        ExtentHelper.getTest().info(message);
-        //MediaEntityBuilder.createScreenCaptureFromBase64String(screenshotBase64).build());
+//        MediaEntityBuilder.createScreenCaptureFromBase64String(screenshotBase64).build();
     }
 
     public static void warn(String message) {

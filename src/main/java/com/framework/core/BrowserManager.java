@@ -38,8 +38,6 @@ public class BrowserManager {
 
     public void startBrowser() {
 
-
-
         String browserType = configProperty.getProperty("browserType").toLowerCase();
         boolean isRemote = Boolean.parseBoolean(configProperty.getProperty("isRemote").toLowerCase());
         Reporter.info("Starting Browser.... " + browserType);

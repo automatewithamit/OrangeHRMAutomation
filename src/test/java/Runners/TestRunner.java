@@ -14,7 +14,9 @@ import org.testng.annotations.DataProvider;
                 "junit:target/cucumber-reports/Cucumber.xml"  // JUnit report
         },
         monochrome = true,                        // Makes console output readable
-        dryRun = false                          // Checks mapping between feature files and step definitions
+        dryRun = false,
+        tags = "@dashboard"
+        // Checks mapping between feature files and step definitions
                                // Run scenarios tagged with @SmokeTest
 )
 public class TestRunner extends AbstractTestNGCucumberTests {

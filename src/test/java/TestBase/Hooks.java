@@ -20,13 +20,13 @@ public class Hooks {
         String dir = System.getProperty("user.dir");
         String reportName = dir+"/Reports/Report_" + timestamp;
         System.out.println("Report Name : "+ reportName);
-        //ExtentHelper.createExtentReports(dir+"/Reports","Report_"+timestamp);
+        ExtentHelper.createExtentReports("/Reports/","Report_"+timestamp+".html");
 
     }
     @Before
-    public void before(){
+    public void before(Scenario scenario){
         browserManager.startBrowser();
-        ExtentHelper.getTest();
+        ExtentHelper.startTest(scenario.getName(),"");
     }
     @After
     public void after(){
@@ -36,12 +36,10 @@ public class Hooks {
 
     @AfterAll
     public static void tearDown(){
+
         ExtentHelper.endReport();
     }
     }
-    //BeforeSuite
-    //BeforeTest
-    //BeforeClass
-    //BeforeMethod
+
 
 
