@@ -12,54 +12,50 @@ import org.testng.Assert;
 
 import static com.framework.core.BrowserManager.getDriver;
 
-public class PerformancePage extends Header{
+public class PerformancePage extends Header {
 
 
-    TextBox userName=new TextBox(By.xpath("//input[@placeholder='Username']"));
-    TextBox passWord=new TextBox(By.xpath("//input[@placeholder='Password']"));
+    TextBox userName = new TextBox(By.xpath("//input[@placeholder='Username']"));
+    TextBox passWord = new TextBox(By.xpath("//input[@placeholder='Password']"));
     Button loginButton = new Button(By.xpath("//button[@type='submit']"));
-    Button kpiAddButton=new Button(By.xpath("//button[@class='oxd-button oxd-button--medium oxd-button--secondary']"));
-    TextBox kpiTextBoxTitle=new TextBox(By.xpath("//input[@placeholder='Search']"));
-    Button kpiSaveButton=new Button(By.xpath("//button[contains(@class,'secondary orangehrm-left-space')]"));
+    Button kpiAddButton = new Button(By.xpath("//button[@class='oxd-button oxd-button--medium oxd-button--secondary']"));
+    TextBox kpiTextBoxTitle = new TextBox(By.xpath("//input[@placeholder='Search']"));
+    Button kpiSaveButton = new Button(By.xpath("//button[contains(@class,'secondary orangehrm-left-space')]"));
 
     //Method for entering Login/Password
-    public void enterLoginPassword()
-    {
+    public void enterLoginPassword() {
         userName.setText(ConfigReader.read("userName"));
         passWord.setText(ConfigReader.read("password"));
     }
 
-    public void clickLoginButton(){
+    public void clickLoginButton() {
         loginButton.click();
     }
 
 
-    public void dashboardValidation(){
-        WebElement validationD= getDriver().findElement(By.xpath("//h6[contains(@class,'oxd-text oxd-text')]"));
+    public void dashboardValidation() {
+        WebElement validationD = getDriver().findElement(By.xpath("//h6[contains(@class,'oxd-text oxd-text')]"));
         Assert.assertTrue(validationD.isDisplayed());
     }
 
-    public void myReviewsValidation(){
-        WebElement validateMR= getDriver().findElement(By.xpath("//h6[contains(@class,'angehrm-main-title')]"));
+    public void myReviewsValidation() {
+        WebElement validateMR = getDriver().findElement(By.xpath("//h6[contains(@class,'angehrm-main-title')]"));
         Assert.assertTrue(validateMR.isDisplayed());
     }
 
-    public void myTrackersValidation(){
-        WebElement validateMT= getDriver().findElement(By.xpath("//h6[contains(@class,'oxd-text oxd-text--h6 orangehrm')]"));
+    public void myTrackersValidation() {
+        WebElement validateMT = getDriver().findElement(By.xpath("//h6[contains(@class,'oxd-text oxd-text--h6 orangehrm')]"));
         Assert.assertTrue(validateMT.isDisplayed());
     }
 
-    public void employeeReview(){
+    public void employeeReview() {
         getDriver().findElement(By.xpath("//a[text()='Employee Reviews']")).click();
     }
 
-    public void employeeReviewValidation(){
-        WebElement validateER=getDriver().findElement(By.xpath("//h5[contains(@class,'oxd-text oxd-text--')]"));
+    public void employeeReviewValidation() {
+        WebElement validateER = getDriver().findElement(By.xpath("//h5[contains(@class,'oxd-text oxd-text--')]"));
         Assert.assertTrue(validateER.isDisplayed());
     }
-
-
-
 
 
     // Method to click the Performance Menu
@@ -92,36 +88,34 @@ public class PerformancePage extends Header{
         employeeTrackersMenu.click();
     }
 
-    public void myReviewsDropdown(){
+    public void myReviewsDropdown() {
         getDriver().findElement(By.xpath("//a[text()='My Reviews']")).click();
     }
 
-    public void kPIDropdown(){
+    public void kPIDropdown() {
         getDriver().findElement(By.xpath("//a[text()='KPIs']")).click();
     }
 
-    public void clickAddKPIButton(){
+    public void clickAddKPIButton() {
         kpiAddButton.click();
     }
 
-    public void enterKPITitle(){
+    public void enterKPITitle() {
         kpiTextBoxTitle.click();
         kpiTextBoxTitle.setText("Automation Tester");
 
     }
 
-    public void selectJobTitleDB(){
-        WebElement clickJobTitle=getDriver().findElement(By.xpath("//div[@class='oxd-select-wrapper']"));
+    public void selectJobTitleDB() {
+        WebElement clickJobTitle = getDriver().findElement(By.xpath("//div[@class='oxd-select-wrapper']"));
         clickJobTitle.click();
-        WebElement enterTitle=getDriver().findElement(By.xpath("//div[@class='oxd-select-text-input' and text()='Automation tester']"));
+        WebElement enterTitle = getDriver().findElement(By.xpath("//div[@class='oxd-select-text-input' and text()='Automation tester']"));
         enterTitle.click();
     }
 
-    public void setKpiSaveButton(){
+    public void setKpiSaveButton() {
         kpiSaveButton.click();
     }
-
-
 
 
 }

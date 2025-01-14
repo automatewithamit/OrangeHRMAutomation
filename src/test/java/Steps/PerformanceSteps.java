@@ -66,7 +66,7 @@ public class PerformanceSteps extends CommonMethods {
     //TC-02
     @When("the user clicks My Trackers")
     public void the_user_clicks_my_trackers() {
-       performancePage.clickMyTrackersMenu();
+        performancePage.clickMyTrackersMenu();
 
     }
 
@@ -81,18 +81,18 @@ public class PerformanceSteps extends CommonMethods {
 
     @When("the user clicks on Configure")
     public void the_user_clicks_on_configure() {
-      performancePage.clickConfigureMenu();
+        performancePage.clickConfigureMenu();
     }
 
     @When("the user clicks on KPIs from the dropdown")
     public void the_user_clicks_on_kp_is_from_the_dropdown() {
-       performancePage.kPIDropdown();
+        performancePage.kPIDropdown();
     }
 
     @When("the user clicks the Add button under Key Performance Indicators for Job Title")
     public void the_user_clicks_the_add_button_under_key_performance_indicators_for_job_title() throws InterruptedException {
-       performancePage.clickAddKPIButton();
-       Thread.sleep(5000);
+        performancePage.clickAddKPIButton();
+        Thread.sleep(5000);
 
     }
 
@@ -104,12 +104,12 @@ public class PerformanceSteps extends CommonMethods {
 
     @When("the user selects Job Title from the dropdown")
     public void the_user_selects_job_title_from_the_dropdown() {
-      performancePage.selectJobTitleDB();
+        performancePage.selectJobTitleDB();
     }
 
     @When("the user clicks the Save button under Add Key Performance Indicator")
     public void the_user_clicks_the_save_button_under_add_key_performance_indicator() {
-      performancePage.setKpiSaveButton();
+        performancePage.setKpiSaveButton();
     }
 
     @Then("the KPI is successfully saved")
@@ -124,7 +124,7 @@ public class PerformanceSteps extends CommonMethods {
 
     @When("the user clicks Employee Reviews")
     public void the_user_clicks_employee_reviews() {
-    performancePage.employeeReview();
+        performancePage.employeeReview();
     }
 
 
@@ -135,7 +135,6 @@ public class PerformanceSteps extends CommonMethods {
     }
 
 //*****************************************************************************************
-
 
 
 }
