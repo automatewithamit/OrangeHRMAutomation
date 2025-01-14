@@ -39,22 +39,19 @@ public class ExtentHelper {
     }
 
     public static synchronized ExtentTest startTest(String testName, String desc) {
-
         ExtentTest test = extentReports.createTest(testName, desc);
-
         extentTestMap.put((int) Thread.currentThread().getId(), test);
-
         return test;
     }
     public static synchronized void endTest() {
         ExtentTest test = getTest();
+
         if (test != null) {
             Reporter.info("Ending test: " + test.getModel().getName());
         }
     }
 
     public static synchronized void endReport() {
-
         extentReports.flush();
 
     }

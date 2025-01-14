@@ -1,4 +1,5 @@
 package com.framework.reporting;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -19,7 +20,7 @@ import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 
 
-public class Reporter implements  ITestListener {
+public class Reporter implements ITestListener {
 
     private static Logger Log = LogManager.getLogger(Reporter.class.getName());
     public static String testMethodReportFolder;
@@ -85,10 +86,10 @@ public class Reporter implements  ITestListener {
     }
 
     public static void info(String message) {
-//        Log.info(message);
-//        ExtentHelper.getTest().log(Status.INFO, message);
+        Log.info(message);
+        ExtentHelper.getTest().log(Status.INFO, message);
 //        extentScreenShot();
-//        ExtentHelper.getTest().info(message);
+        ExtentHelper.getTest().info(message);
 //        MediaEntityBuilder.createScreenCaptureFromBase64String(screenshotBase64).build();
     }
 

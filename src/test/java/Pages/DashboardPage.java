@@ -37,10 +37,7 @@ public class DashboardPage extends Header {
 
     public void isRedirected() {
         WebElement dashboardPage = getDriver().findElement(By.xpath("//h6[contains(@class,'header-breadcrumb-module')]"));
-        Assert.assertTrue(dashboardPage.isDisplayed());
-        //WebElement dashboardElement = driver.findElement(By.xpath("//div[@class='oxd-layout-context']"));
-        //dashboardElement.isDisplayed();
-//"//div[@class='oxd-layout-context']"))
+        Assert.assertTrue(!dashboardPage.isDisplayed());
     }
 
     public void isLogoDisplayed() {

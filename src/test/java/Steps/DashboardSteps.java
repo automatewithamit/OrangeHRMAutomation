@@ -38,25 +38,21 @@ public class DashboardSteps {
     @When("the user is redirected to the dashboard page")
     public void the_user_is_redirected_to_the_dashboard_page() {
         dashboardPage.isRedirected();
-
     }
 
     @Then("the dashboard should display the header with the application logo")
     public void the_dashboard_should_display_the_header_with_the_application_logo() {
         dashboardPage.isLogoDisplayed();
-
     }
 
     @Then("the dashboard should display the user's profile information")
     public void the_dashboard_should_display_the_users_profile_information() {
         dashboardPage.isUserProfileDisplayed();
-
     }
 
     @Then("all widgets on the dashboard should be visible")
     public void all_widgets_on_the_dashboard_should_be_visible() {
         dashboardPage.isWidgetVisible();
-
     }
 
     //@Then("the navigation menu should be functional")
@@ -73,7 +69,6 @@ public class DashboardSteps {
     @When("the user clicks the panel toggle button")
     public void the_user_clicks_the_panel_toggle_button() {
         dashboardPage.toggleNavigationPanel();
-
     }
 
     @Then("the navigational panel should collapse smoothly")

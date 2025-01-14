@@ -25,8 +25,9 @@ public class Hooks {
     }
     @Before
     public void before(Scenario scenario){
-        browserManager.startBrowser();
         ExtentHelper.startTest(scenario.getName(),"");
+        browserManager.startBrowser();
+
     }
     @After
     public void after(){
@@ -36,7 +37,6 @@ public class Hooks {
 
     @AfterAll
     public static void tearDown(){
-
         ExtentHelper.endReport();
     }
     }
