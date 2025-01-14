@@ -29,7 +29,11 @@ public class DropDown {
         this.locator = new ByChained(this.locator, By.xpath("//following::div[@role='option' and .='" + option + "']"));
         click();
     }
-
+    public void selectOption(int indexNumber) {
+        click();
+        this.locator = new ByChained(this.locator, By.xpath("(//following::div[@role='option'])["+indexNumber+"]"));
+        click();
+    }
     public String getText() {
 
         WebElement element;
