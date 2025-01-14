@@ -52,7 +52,7 @@ public class PerformanceSteps extends CommonMethods {
 
     @When("the user clicks My Reviews from dropdown")
     public void the_user_clicks_my_reviews_from_dropdown() {
-        getDriver().findElement(By.xpath("//a[text()='My Reviews']")).click();
+        performancePage.myReviewsDropdown();
 
     }
 
@@ -86,7 +86,7 @@ public class PerformanceSteps extends CommonMethods {
 
     @When("the user clicks on KPIs from the dropdown")
     public void the_user_clicks_on_kp_is_from_the_dropdown() {
-        getDriver().findElement(By.xpath("//a[text()='KPIs']")).click();
+       performancePage.kPIDropdown();
     }
 
     @When("the user clicks the Add button under Key Performance Indicators for Job Title")
@@ -118,6 +118,23 @@ public class PerformanceSteps extends CommonMethods {
     }
 
 
+    //*****************************************************************************************
+
+    //TC-06
+
+    @When("the user clicks Employee Reviews")
+    public void the_user_clicks_employee_reviews() {
+    performancePage.employeeReview();
+    }
+
+
+    @Then("user can successfully view the Employees Review")
+    public void user_can_successfully_view_the_employees_review() {
+        performancePage.employeeReviewValidation();
+
+    }
+
+//*****************************************************************************************
 
 
 

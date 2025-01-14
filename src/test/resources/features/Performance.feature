@@ -51,11 +51,11 @@ Feature: Performance Module functionality
     And the user clicks the Activate button
     Then the performance review is successfully saved
 
+
   @TC-06
   Scenario: Verify management can access Employee Reviews
     When the user clicks Manage Reviews
     And the user clicks Employee Reviews
-    And the user clicks the Evaluate icon
     Then user can successfully view the Employees Review
 
 

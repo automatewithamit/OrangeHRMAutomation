@@ -49,6 +49,15 @@ public class PerformancePage extends Header{
         Assert.assertTrue(validateMT.isDisplayed());
     }
 
+    public void employeeReview(){
+        getDriver().findElement(By.xpath("//a[text()='Employee Reviews']")).click();
+    }
+
+    public void employeeReviewValidation(){
+        WebElement validateER=getDriver().findElement(By.xpath("//h5[contains(@class,'oxd-text oxd-text--')]"));
+        Assert.assertTrue(validateER.isDisplayed());
+    }
+
 
 
 
@@ -81,6 +90,14 @@ public class PerformancePage extends Header{
     public void clickEmployeeTrackersMenu() {
         WebElement employeeTrackersMenu = getDriver().findElement(By.cssSelector("a[href='/web/index.php/performance/employeeTrackers']"));
         employeeTrackersMenu.click();
+    }
+
+    public void myReviewsDropdown(){
+        getDriver().findElement(By.xpath("//a[text()='My Reviews']")).click();
+    }
+
+    public void kPIDropdown(){
+        getDriver().findElement(By.xpath("//a[text()='KPIs']")).click();
     }
 
     public void clickAddKPIButton(){
