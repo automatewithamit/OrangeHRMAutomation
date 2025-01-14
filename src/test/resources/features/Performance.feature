@@ -8,20 +8,20 @@ Feature: Performance Module functionality
     And the user clicks Performance in navigation panel
 
 
-  @TC-01
+  @TC-01 @performance01
   Scenario: Verify employees can access My Reviews
     When the user clicks Manage Reviews
     And the user clicks My Reviews from dropdown
     Then user can successfully view My Reviews
 
 
-  @TC-02
+  @TC-02 @performance02
   Scenario: Verify employees can access My Trackers
     When the user clicks My Trackers
     Then the user can successfully view My Trackers
 
 
-  @TC-03
+  @TC-03 @performance03
   Scenario: Verify management can add KPI’s
     When the user clicks on Configure
     And the user clicks on KPIs from the dropdown
@@ -32,7 +32,7 @@ Feature: Performance Module functionality
     Then the KPI is successfully saved
 
 
-  @TC-04
+  @TC-04 @performance04
   Scenario: Verify management can add performance tracker for employees
     When the user clicks on Configure
     And the user clicks on Trackers from the dropdown
@@ -41,7 +41,7 @@ Feature: Performance Module functionality
     Then the performance tracker is successfully saved
 
 
-  @TC-05
+  @TC-05 @performance05
   Scenario: Verify management can add performance reviews/ratings for employees
     When the user clicks Manage Reviews
     And the user clicks Manage Reviews from the dropdown
@@ -52,21 +52,21 @@ Feature: Performance Module functionality
     Then the performance review is successfully saved
 
 
-  @TC-06
+  @TC-06 @performance06
   Scenario: Verify management can access Employee Reviews
     When the user clicks Manage Reviews
     And the user clicks Employee Reviews
     Then user can successfully view the Employees Review
 
 
-  @TC-07
+  @TC-07 @performance07
   Scenario: Verify management can view Employee Trackers
     When the user clicks Employee Trackers
     And the user clicks the View icon
     Then the user can successfully view the Employee Trackers
 
 
-  @TC-08
+  @TC-08 @performance08
   Scenario: Verify management can complete employee reviews for employee
     When the user clicks Manage Reviews
     And the user clicks Employee Reviews
@@ -76,7 +76,7 @@ Feature: Performance Module functionality
     Then the Employee Review is successfully saved
 
 
-  @TC-09
+  @TC-09 @performance09
   Scenario: Verify employees can complete self-evaluation review
     When the user clicks Manage Reviews
     And the user clicks My Reviews
@@ -86,7 +86,7 @@ Feature: Performance Module functionality
     Then the self-evaluation is successfully saved
 
 
-  @TC-10
+  @TC-10 @performance10
   Scenario: Verify management can add KPI with no Job Title
     When the user clicks on Configure
     And the user clicks on KPIs from the dropdown

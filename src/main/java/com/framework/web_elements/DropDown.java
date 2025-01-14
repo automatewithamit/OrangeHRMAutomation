@@ -29,7 +29,6 @@ public class DropDown {
         this.locator = new ByChained(this.locator, By.xpath("//following::div[@role='option' and .='" + option + "']"));
         click();
     }
-
     public String getText() {
 
         WebElement element;

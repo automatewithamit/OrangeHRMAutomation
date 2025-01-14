@@ -21,7 +21,7 @@ public class PerformancePage extends Header {
     Button kpiAddButton = new Button(By.xpath("//button[@class='oxd-button oxd-button--medium oxd-button--secondary']"));
     TextBox kpiTextBoxTitle = new TextBox(By.xpath("//input[@placeholder='Search']"));
     Button kpiSaveButton = new Button(By.xpath("//button[contains(@class,'secondary orangehrm-left-space')]"));
-
+    DropDown reviewStatusDropdown = new DropDown(By.xpath("(//label[text()='Review Status']/..//following::div[@class='oxd-select-wrapper']/div)[1]"));
     //Method for entering Login/Password
     public void enterLoginPassword() {
         userName.setText(ConfigReader.read("userName"));
@@ -89,7 +89,9 @@ public class PerformancePage extends Header {
     }
 
     public void myReviewsDropdown() {
-        getDriver().findElement(By.xpath("//a[text()='My Reviews']")).click();
+
+        reviewStatusDropdown.selectOption("Completed");
+//        getDriver().findElement(By.xpath("//a[text()='My Reviews']")).click();
     }
 
     public void kPIDropdown() {
