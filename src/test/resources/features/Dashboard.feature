@@ -22,7 +22,7 @@ Feature: Dashboard Module Functionality
 
   @OHR-6  @TC03 @dashboard
   Scenario: Verify pending tasks are displayed correctly in "My Actions"
-    Given the "My Actions" section is visible on the dashboard
+    Given the "My Actions" section is visible on the dashboard`
     When the user views the "My Actions" section
     When the section should display a list of pending tasks
     Then the total number of tasks displayed should match the records in the system
@@ -67,7 +67,7 @@ Feature: Dashboard Module Functionality
     Then the navigational panel should collapse smoothly
     And the toggle button should remain visible
 
-  @OHR-6  @TC04 @dashboard
+  @OHR-6  @TC04 @dashboard  @smoke
   Scenario: Verify behavior when no employees are on leave
     Given there are no employees on leave for today
     When the widget loads

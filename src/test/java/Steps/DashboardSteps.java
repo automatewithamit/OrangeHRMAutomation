@@ -3,11 +3,13 @@ package Steps;
 import Pages.DashboardPage;
 import TestBase.Hooks;
 import com.aventstack.extentreports.model.Report;
+import com.framework.web_elements.Highlighter;
 import com.google.common.base.Verify;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -45,6 +47,9 @@ public class DashboardSteps {
 
         WebElement loginButton = getDriver().findElement(By.cssSelector("button[type='submit']"));
         loginButton.click();
+
+        //JavascriptExecutor js = (JavascriptExecutor) getDriver();
+        //js.executeScript("arguments[0]. setAttribute('style', 'background: pink; border:4x solid purple',), useNameFields, passwordFields");
 
     }
 
@@ -124,13 +129,28 @@ public class DashboardSteps {
 
     @Given("the dashboard should display the user's profile picture")
     public void the_dashboard_should_display_the_user_s_profile_picture() {
+
         dashboardPage.displayUserProfilePic();
     }
     @Then("the dashboard should display the user's full name")
     public void the_dashboard_should_display_the_user_s_full_name() {
-       dashboardPage.displayUserName();
-    }
 
+        dashboardPage.displayUserName();
+    }
+    @Given("there are no employees on leave for today")
+    public void there_are_no_employees_on_leave_for_today() {
+        dashboardPage.noEmpOnLeave();
+
+    }
+    @When("the widget loads")
+    public void the_widget_loads() {
+        dashboardPage.widgetLoads();
+
+    }
+    @Then("the widget should display a message {string}")
+    public void the_widget_should_display_a_message(String string) {
+        dashboardPage.displayMessage();
+    }
 
 }
 

@@ -118,7 +118,6 @@ public class DashboardPage extends Header {
         for (WebElement widget : widgets) {
             System.out.println(widget.getText());
 
-
         }
 
     }
@@ -141,6 +140,23 @@ public class DashboardPage extends Header {
         WebElement displayName = getDriver().findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[1]/header/div[1]/div[3]/ul/li/span/p"));
         Assert.assertTrue(displayName.isDisplayed());
     }
+
+    public void noEmpOnLeave() {
+        WebElement noEmployeeOnLeave = getDriver().findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[5]/div/div[2]/div/img"));
+        Assert.assertTrue(noEmployeeOnLeave.isDisplayed());
+    }
+
+    public void widgetLoads() {
+        WebElement empOnLeaveIcon = getDriver().findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[5]/div"));
+        Assert.assertTrue(empOnLeaveIcon.isDisplayed());
+    }
+
+    public void displayMessage() {
+        WebElement messageDisplay = getDriver().findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[5]/div/div[2]/div/p"));
+        Assert.assertTrue(messageDisplay.isDisplayed());
+    }
+
+
 }
 
 
